@@ -1,78 +1,8 @@
 ﻿@page "/"
 
-@* expresión implícita *@
-@* <p>Hola, @UtilidadesString.Transformar(nombre)</p> *@
-@* expresión explícita *@
-@* <p>Vamos a sumar 2 + 2 = @(2 + 2)</p> *@
-@* expresión implícita *@
-@* <button @onclick=@(() => Console.WriteLine("Hi from button"))>Presióname</button> *@
-@* expresión explícita *@
-@* <button @onclick=@ManejarClickBoton>Presióname</button> *@
-
-<div>
-    <h3>Película</h3>
-    <p>Título : <b>@WakandaForever.Titulo</b></p>
-    <p>Fecha de lanzamiento: <b>@WakandaForever.FechaLanzamiento</b></p>
-</div>
-
-<div>
-    <h3>Películas Listado</h3>
-    @if (pelis is null)
-    {
-        @* <p>Cargando películas</p> *@
-        <img alt="alt" src="https://i.pinimg.com/originals/3d/6a/a9/3d6aa9082f3c9e285df9970dc7b762ac.gif">
-    }
-    else if (pelis.Count == 0)
-    {
-        <p>No hay películas para mostrar</p>
-    }
-    else
-    {
-        @foreach (var pelicula in pelis)
-        {
-            <div>
-                <p>Título : @((MarkupString)pelicula.Titulo)
-                    @if (DateTime.Today.Subtract(pelicula.FechaLanzamiento).Days <= 14)
-                    {
-                        <span style="color: red;">(!Nuevo!)</span>
-                    }
-                </p>
-                <p>Fecha de lanzamiento: <b>@pelicula.FechaLanzamiento</b></p>
-            </div>
-        }
-    }
-</div>
-
-
+<ListadoPeliculas pelis="ObtenerPeliculas()" />
 
 @code {
-
-    protected override async Task OnInitializedAsync()
-    {
-        await Task.Delay(3000);
-        pelis = ObtenerPeliculas();
-    }
-
-    string nombre = "Alain Jorge Acuña";
-
-    @* string Transformar(string valor) => valor.ToUpper(); *@
-
-    void ManejarClickBoton()
-    {
-        Console.WriteLine("Me han clickeado desde una function!");
-    }
-
-    Pelicula WakandaForever { get { return ObtenerPelicula(); } }
-    List<Pelicula> pelis { get; set; } = null!;
-
-    Pelicula ObtenerPelicula()
-    {
-        return new Pelicula
-            {
-                Titulo = "Wakanda Forever",
-                FechaLanzamiento = new DateTime(2022, 11, 11)
-            };
-    }
 
     List<Pelicula> ObtenerPeliculas()
     {

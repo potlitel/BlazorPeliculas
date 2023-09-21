@@ -379,7 +379,7 @@
         }
       },
       {
-        "HashCode": 1245485078,
+        "HashCode": 346095549,
         "Kind": "Components.Component",
         "Name": "BlazorPeliculas.Client.Shared.ListadoPeliculas",
         "AssemblyName": "BlazorPeliculas.Client",
@@ -390,6 +390,19 @@
             "TagName": "ListadoPeliculas"
           }
         ],
+        "BoundAttributes": [
+          {
+            "Kind": "Components.Component",
+            "Name": "pelis",
+            "TypeName": "System.Collections.Generic.List<BlazorPeliculas.Shared.Entidades.Pelicula>",
+            "DisplayName": "System.Collections.Generic.List<BlazorPeliculas.Shared.Entidades.Pelicula> BlazorPeliculas.Client.Shared.ListadoPeliculas.pelis",
+            "IsEditorRequired": true,
+            "Metadata": {
+              "Common.PropertyName": "pelis",
+              "Common.GloballyQualifiedTypeName": "global::System.Collections.Generic.List<global::BlazorPeliculas.Shared.Entidades.Pelicula>"
+            }
+          }
+        ],
         "Metadata": {
           "Common.TypeName": "BlazorPeliculas.Client.Shared.ListadoPeliculas",
           "Common.TypeNameIdentifier": "ListadoPeliculas",
@@ -398,7 +411,7 @@
         }
       },
       {
-        "HashCode": -1448957405,
+        "HashCode": 1316762614,
         "Kind": "Components.Component",
         "Name": "BlazorPeliculas.Client.Shared.ListadoPeliculas",
         "AssemblyName": "BlazorPeliculas.Client",
@@ -409,9 +422,87 @@
             "TagName": "BlazorPeliculas.Client.Shared.ListadoPeliculas"
           }
         ],
+        "BoundAttributes": [
+          {
+            "Kind": "Components.Component",
+            "Name": "pelis",
+            "TypeName": "System.Collections.Generic.List<BlazorPeliculas.Shared.Entidades.Pelicula>",
+            "DisplayName": "System.Collections.Generic.List<BlazorPeliculas.Shared.Entidades.Pelicula> BlazorPeliculas.Client.Shared.ListadoPeliculas.pelis",
+            "IsEditorRequired": true,
+            "Metadata": {
+              "Common.PropertyName": "pelis",
+              "Common.GloballyQualifiedTypeName": "global::System.Collections.Generic.List<global::BlazorPeliculas.Shared.Entidades.Pelicula>"
+            }
+          }
+        ],
         "Metadata": {
           "Common.TypeName": "BlazorPeliculas.Client.Shared.ListadoPeliculas",
           "Common.TypeNameIdentifier": "ListadoPeliculas",
+          "Common.TypeNamespace": "BlazorPeliculas.Client.Shared",
+          "Components.NameMatch": "Components.FullyQualifiedNameMatch",
+          "Runtime.Name": "Components.IComponent"
+        }
+      },
+      {
+        "HashCode": -119798439,
+        "Kind": "Components.Component",
+        "Name": "BlazorPeliculas.Client.Shared.PeliculaIndividual",
+        "AssemblyName": "BlazorPeliculas.Client",
+        "DisplayName": "BlazorPeliculas.Client.Shared.PeliculaIndividual",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "PeliculaIndividual"
+          }
+        ],
+        "BoundAttributes": [
+          {
+            "Kind": "Components.Component",
+            "Name": "pelicula",
+            "TypeName": "BlazorPeliculas.Shared.Entidades.Pelicula",
+            "DisplayName": "BlazorPeliculas.Shared.Entidades.Pelicula BlazorPeliculas.Client.Shared.PeliculaIndividual.pelicula",
+            "IsEditorRequired": true,
+            "Metadata": {
+              "Common.PropertyName": "pelicula",
+              "Common.GloballyQualifiedTypeName": "global::BlazorPeliculas.Shared.Entidades.Pelicula"
+            }
+          }
+        ],
+        "Metadata": {
+          "Common.TypeName": "BlazorPeliculas.Client.Shared.PeliculaIndividual",
+          "Common.TypeNameIdentifier": "PeliculaIndividual",
+          "Common.TypeNamespace": "BlazorPeliculas.Client.Shared",
+          "Runtime.Name": "Components.IComponent"
+        }
+      },
+      {
+        "HashCode": -103398081,
+        "Kind": "Components.Component",
+        "Name": "BlazorPeliculas.Client.Shared.PeliculaIndividual",
+        "AssemblyName": "BlazorPeliculas.Client",
+        "DisplayName": "BlazorPeliculas.Client.Shared.PeliculaIndividual",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "BlazorPeliculas.Client.Shared.PeliculaIndividual"
+          }
+        ],
+        "BoundAttributes": [
+          {
+            "Kind": "Components.Component",
+            "Name": "pelicula",
+            "TypeName": "BlazorPeliculas.Shared.Entidades.Pelicula",
+            "DisplayName": "BlazorPeliculas.Shared.Entidades.Pelicula BlazorPeliculas.Client.Shared.PeliculaIndividual.pelicula",
+            "IsEditorRequired": true,
+            "Metadata": {
+              "Common.PropertyName": "pelicula",
+              "Common.GloballyQualifiedTypeName": "global::BlazorPeliculas.Shared.Entidades.Pelicula"
+            }
+          }
+        ],
+        "Metadata": {
+          "Common.TypeName": "BlazorPeliculas.Client.Shared.PeliculaIndividual",
+          "Common.TypeNameIdentifier": "PeliculaIndividual",
           "Common.TypeNamespace": "BlazorPeliculas.Client.Shared",
           "Components.NameMatch": "Components.FullyQualifiedNameMatch",
           "Runtime.Name": "Components.IComponent"
@@ -20747,6 +20838,11 @@
     {
       "FilePath": "g:\\Trabajo\\GitProjects\\Real-Projects\\BlazorPeliculas\\Client\\Shared\\ListadoPeliculas.razor",
       "TargetPath": "Shared\\ListadoPeliculas.razor",
+      "FileKind": "component"
+    },
+    {
+      "FilePath": "g:\\Trabajo\\GitProjects\\Real-Projects\\BlazorPeliculas\\Client\\Shared\\PeliculaIndividual.razor",
+      "TargetPath": "Shared\\PeliculaIndividual.razor",
       "FileKind": "component"
     }
   ]
