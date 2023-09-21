@@ -1,0 +1,21 @@
+﻿@page "/"
+
+@* expresión implícita *@
+<p>Hola, @Transformar(nombre)</p>
+@* expresión explícita *@
+<p>Vamos a sumar 2 = 2 @(2 + 2)</p>
+@* expresión implícita *@
+@* <button @onclick=@(() => Console.WriteLine("Hi from button"))>Presióname</button> *@
+@* expresión explícita *@
+<button @onclick=@ManejarClickBoton>Presióname</button>
+
+@code {
+    string nombre = "Alain Jorge Acuña";
+
+    string Transformar(string valor) => valor.ToUpper();
+
+    void ManejarClickBoton()
+    {
+        Console.WriteLine("Me han clickeado desde una function!");
+    }
+}
