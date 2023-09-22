@@ -1,5 +1,5 @@
-using Microsoft.AspNetCore.Mvc;
 using BlazorPeliculas.Shared;
+using Microsoft.AspNetCore.Mvc;
 
 namespace BlazorPeliculas.Server.Controllers;
 

@@ -17,40 +17,40 @@
     <h3>Películas Listado</h3>
     @* @if (pelis is null)
     {
-        @if (Cargando is not null)
-        {
-            @Cargando    
-        }
-        else
-        {
-            <img alt="alt" src="https://i.pinimg.com/originals/3d/6a/a9/3d6aa9082f3c9e285df9970dc7b762ac.gif">
-        }
+    @if (Cargando is not null)
+    {
+    @Cargando
+    }
+    else
+    {
+    <img alt="alt" src="https://i.pinimg.com/originals/3d/6a/a9/3d6aa9082f3c9e285df9970dc7b762ac.gif">
+    }
     }
     else if (pelis.Count == 0)
     {
-        @if (NoHayPelis is not null)
-        {
-            @NoHayPelis
-        }
-        else
-        {
-            <p>No hay películas para mostrar</p>
-        }
+    @if (NoHayPelis is not null)
+    {
+    @NoHayPelis
+    }
+    else
+    {
+    <p>No hay películas para mostrar</p>
+    }
     }
     else
     { *@
-        @* <input type="checkbox" @onchange="(() => MostrarBotones = !MostrarBotones)" /> *@
-        <input type="checkbox" @bind="MostrarBotones" />
-        <span>Mostrar botones</span>
-        <ListadoGenerico listado="pelis">
-            <HayPelis Context="pelicula" >
-                <PeliculaIndividual pelicula="pelicula" MostrarBotones="MostrarBotones" EliminarPeli="EliminarPeli" />
-            </HayPelis>
-        </ListadoGenerico>
-        @* @foreach (var pelicula in pelis)
-        {
-            <PeliculaIndividual pelicula="pelicula" MostrarBotones="MostrarBotones" EliminarPeli="EliminarPeli"/>
-        } *@
+    @* <input type="checkbox" @onchange="(() => MostrarBotones = !MostrarBotones)" /> *@
+    <input type="checkbox" @bind="MostrarBotones" />
+    <span>Mostrar botones</span>
+    <ListadoGenerico listado="pelis">
+        <HayPelis Context="pelicula">
+            <PeliculaIndividual pelicula="pelicula" MostrarBotones="MostrarBotones" EliminarPeli="EliminarPeli" />
+        </HayPelis>
+    </ListadoGenerico>
+    @* @foreach (var pelicula in pelis)
+    {
+    <PeliculaIndividual pelicula="pelicula" MostrarBotones="MostrarBotones" EliminarPeli="EliminarPeli"/>
+    } *@
     @* } *@
 </div>
 

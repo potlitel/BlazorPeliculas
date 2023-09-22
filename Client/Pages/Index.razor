@@ -1,11 +1,11 @@
 ﻿@page "/"
 
 <ListadoPeliculas pelis="pelis">
-@*     <Cargando>
-        Cargando datos relacionados con las pelis
+    @*     <Cargando>
+    Cargando datos relacionados con las pelis
     </Cargando>
     <NoHayPelis>
-        No HAY!
+    No HAY!
     </NoHayPelis> *@
 </ListadoPeliculas>
 
@@ -31,22 +31,22 @@
     List<Pelicula> ObtenerPeliculas()
     {
         return new List<Pelicula>(){
-new Pelicula
-{
-Titulo = "<b>Wakanda Forever</b>",
-FechaLanzamiento = new DateTime(2023, 9, 11)
-},
-new Pelicula
-{
-Titulo = "<i>Moana</i>",
-FechaLanzamiento = new DateTime(2016, 11, 13)
-},
-new Pelicula
-{
-Titulo = "Inception",
-FechaLanzamiento = new DateTime(2010, 7, 16)
-}
-};
+                new Pelicula
+            {
+            Titulo = "<b>Wakanda Forever</b>",
+            FechaLanzamiento = new DateTime(2023, 9, 11)
+            },
+            new Pelicula
+            {
+            Titulo = "<i>Moana</i>",
+            FechaLanzamiento = new DateTime(2016, 11, 13)
+            },
+            new Pelicula
+            {
+            Titulo = "Inception",
+            FechaLanzamiento = new DateTime(2010, 7, 16)
+            }
+         };
     }
 
     private void AgregarPeli()
