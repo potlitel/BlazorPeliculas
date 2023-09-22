@@ -32,6 +32,22 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5kZXgucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
+[G:/Trabajo/GitProjects/Real-Projects/BlazorPeliculas/Client/Shared/BindAfterDemo.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXEJpbmRBZnRlckRlbW8ucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[G:/Trabajo/GitProjects/Real-Projects/BlazorPeliculas/Client/Shared/BindEvento.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXEJpbmRFdmVudG8ucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[G:/Trabajo/GitProjects/Real-Projects/BlazorPeliculas/Client/Shared/BindGetSetDemo.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXEJpbmRHZXRTZXREZW1vLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[G:/Trabajo/GitProjects/Real-Projects/BlazorPeliculas/Client/Shared/EjemploTextbox.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXEVqZW1wbG9UZXh0Ym94LnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
 [G:/Trabajo/GitProjects/Real-Projects/BlazorPeliculas/Client/Shared/ListadoPeliculas.razor]
 build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXExpc3RhZG9QZWxpY3VsYXMucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 

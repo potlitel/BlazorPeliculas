@@ -26,9 +26,12 @@
     }
     else
     {
+        @* <input type="checkbox" @onchange="(() => MostrarBotones = !MostrarBotones)" /> *@
+        <input type="checkbox" @bind="MostrarBotones" />
+        <span>Mostrar botones</span>
         @foreach (var pelicula in pelis)
         {
-            <PeliculaIndividual pelicula="pelicula" />
+            <PeliculaIndividual pelicula="pelicula" MostrarBotones="MostrarBotones" />
         }
     }
 </div>
@@ -39,6 +42,8 @@
         @* await Task.Delay(3000);
 pelis = ObtenerPeliculas(); *@
     }
+
+    bool MostrarBotones = false;
 
     string nombre = "Alain Jorge Acuña";
 

@@ -1,7 +1,6 @@
 G:\Trabajo\GitProjects\Real-Projects\BlazorPeliculas\Shared\bin\Debug\net7.0\BlazorPeliculas.Shared.deps.json
 G:\Trabajo\GitProjects\Real-Projects\BlazorPeliculas\Shared\bin\Debug\net7.0\BlazorPeliculas.Shared.dll
 G:\Trabajo\GitProjects\Real-Projects\BlazorPeliculas\Shared\bin\Debug\net7.0\BlazorPeliculas.Shared.pdb
-G:\Trabajo\GitProjects\Real-Projects\BlazorPeliculas\Shared\obj\Debug\net7.0\BlazorPeliculas.Shared.csproj.AssemblyReference.cache
 G:\Trabajo\GitProjects\Real-Projects\BlazorPeliculas\Shared\obj\Debug\net7.0\BlazorPeliculas.Shared.GeneratedMSBuildEditorConfig.editorconfig
 G:\Trabajo\GitProjects\Real-Projects\BlazorPeliculas\Shared\obj\Debug\net7.0\BlazorPeliculas.Shared.AssemblyInfoInputs.cache
 G:\Trabajo\GitProjects\Real-Projects\BlazorPeliculas\Shared\obj\Debug\net7.0\BlazorPeliculas.Shared.AssemblyInfo.cs
