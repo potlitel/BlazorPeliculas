@@ -1,23 +1,32 @@
 ﻿@page "/"
 
-<ListadoPeliculas pelis="ObtenerPeliculas()">
-    <Cargando>
+<ListadoPeliculas pelis="pelis">
+@*     <Cargando>
         Cargando datos relacionados con las pelis
     </Cargando>
     <NoHayPelis>
         No HAY!
-    </NoHayPelis>
+    </NoHayPelis> *@
 </ListadoPeliculas>
 
-<BindAfterDemo />
+@* <BindAfterDemo /> *@
 
-<div>
+@* <div>
     <h2>Crear película</h2>
     <EjemploTextbox placeholder="Nombre de película" />
 
-</div>
+</div> *@
+
+<button @onclick="AgregarPeli">Agregar peli</button>
 
 @code {
+    public List<Pelicula> pelis { get; set; } = null!;
+
+    protected override void OnInitialized()
+    {
+        Console.WriteLine("OnInitialized");
+        pelis = ObtenerPeliculas();
+    }
 
     List<Pelicula> ObtenerPeliculas()
     {
@@ -38,5 +47,10 @@ Titulo = "Inception",
 FechaLanzamiento = new DateTime(2010, 7, 16)
 }
 };
+    }
+
+    private void AgregarPeli()
+    {
+        pelis.Add(new Pelicula { Titulo = "Nuevo", FechaLanzamiento = DateTime.Today });
     }
 }

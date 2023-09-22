@@ -15,7 +15,7 @@
 
 <div>
     <h3>Películas Listado</h3>
-    @if (pelis is null)
+    @* @if (pelis is null)
     {
         @if (Cargando is not null)
         {
@@ -38,22 +38,48 @@
         }
     }
     else
-    {
+    { *@
         @* <input type="checkbox" @onchange="(() => MostrarBotones = !MostrarBotones)" /> *@
         <input type="checkbox" @bind="MostrarBotones" />
         <span>Mostrar botones</span>
-        @foreach (var pelicula in pelis)
+        <ListadoGenerico listado="pelis">
+            <HayPelis Context="pelicula" >
+                <PeliculaIndividual pelicula="pelicula" MostrarBotones="MostrarBotones" EliminarPeli="EliminarPeli" />
+            </HayPelis>
+        </ListadoGenerico>
+        @* @foreach (var pelicula in pelis)
         {
             <PeliculaIndividual pelicula="pelicula" MostrarBotones="MostrarBotones" EliminarPeli="EliminarPeli"/>
-        }
-    }
+        } *@
+    @* } *@
 </div>
 
 @code {
-    protected override async Task OnInitializedAsync()
+    // protected override async Task OnInitializedAsync()
+    // {
+    //     @* await Task.Delay(3000);
+    //     pelis = ObtenerPeliculas(); *@
+    // }
+
+    protected override void OnInitialized()
     {
-        @* await Task.Delay(3000);
-pelis = ObtenerPeliculas(); *@
+        Console.WriteLine($"OnInitialized - Cantidad de pelis {pelis.Count}");
+    }
+
+    protected override void OnParametersSet()
+    {
+        Console.WriteLine($"OnParametersSet - Cantidad de pelis {pelis.Count}");
+    }
+
+    protected override void OnAfterRender(bool primeraRenderizacion)
+    {
+        Console.WriteLine("OnAfterRender: Primera vez: " + primeraRenderizacion);
+    }
+
+    protected override bool ShouldRender()
+    {
+        Console.WriteLine("ShouldRender");
+        return true;
     }
 
     [Parameter]

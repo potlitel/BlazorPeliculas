@@ -1,0 +1,45 @@
+﻿@typeparam Titem
+
+@if (listado is null)
+{
+    @if (Cargando is not null)
+    {
+        @Cargando
+    }
+    else
+    {
+        <img alt="alt" src="https://i.pinimg.com/originals/3d/6a/a9/3d6aa9082f3c9e285df9970dc7b762ac.gif">
+    }
+}
+else if (listado.Count == 0)
+{
+    @if (NoHayPelis is not null)
+    {
+        @NoHayPelis
+    }
+    else
+    {
+        <p>No hay películas para mostrar</p>
+    }
+}
+else
+{
+    @foreach (var elemento in listado)
+    {
+        @HayPelis(elemento);
+    }
+}
+
+@code {
+    [Parameter]
+    public RenderFragment Cargando { get; set; } = null!;
+
+    [Parameter]
+    public RenderFragment NoHayPelis { get; set; } = null!;
+
+    [Parameter]
+    public RenderFragment<Titem> HayPelis { get; set; } = null!;
+
+    [Parameter]
+    public List<Titem> listado { get; set; } = null!;
+}
