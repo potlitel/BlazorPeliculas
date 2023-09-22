@@ -31,7 +31,7 @@
         <span>Mostrar botones</span>
         @foreach (var pelicula in pelis)
         {
-            <PeliculaIndividual pelicula="pelicula" MostrarBotones="MostrarBotones" />
+            <PeliculaIndividual pelicula="pelicula" MostrarBotones="MostrarBotones" EliminarPeli="EliminarPeli"/>
         }
     }
 </div>
@@ -87,5 +87,11 @@ Titulo = "Inception",
 FechaLanzamiento = new DateTime(2010, 7, 16)
 }
 };
+    }
+
+    private void EliminarPeli(Pelicula peliName)
+    {
+        Console.WriteLine($"Eliminando la película {peliName.Titulo}");
+        pelis.Remove(peliName);
     }
 }

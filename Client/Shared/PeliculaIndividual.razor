@@ -8,7 +8,7 @@
     <p>Fecha de lanzamiento: <b>@pelicula.FechaLanzamiento</b></p>
     @if (MostrarBotones)
     {
-        <div><button @onclick="Eliminar">Borrar</button></div>
+        <div><button @onclick="(() => EliminarPeli.InvokeAsync(pelicula))">Borrar</button></div>
     }
 </div>
 
@@ -19,6 +19,8 @@
     public Pelicula pelicula { get; set; } = null!;
     [Parameter]
     public bool MostrarBotones { get; set; } = false;
+    [Parameter]
+    public EventCallback<Pelicula> EliminarPeli { get; set; }
 
     void Eliminar()
     {
