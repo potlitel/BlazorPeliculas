@@ -17,12 +17,25 @@
     <h3>Películas Listado</h3>
     @if (pelis is null)
     {
-        @* <p>Cargando películas</p> *@
-        <img alt="alt" src="https://i.pinimg.com/originals/3d/6a/a9/3d6aa9082f3c9e285df9970dc7b762ac.gif">
+        @if (Cargando is not null)
+        {
+            @Cargando    
+        }
+        else
+        {
+            <img alt="alt" src="https://i.pinimg.com/originals/3d/6a/a9/3d6aa9082f3c9e285df9970dc7b762ac.gif">
+        }
     }
     else if (pelis.Count == 0)
     {
-        <p>No hay películas para mostrar</p>
+        @if (NoHayPelis is not null)
+        {
+            @NoHayPelis
+        }
+        else
+        {
+            <p>No hay películas para mostrar</p>
+        }
     }
     else
     {
@@ -42,6 +55,12 @@
         @* await Task.Delay(3000);
 pelis = ObtenerPeliculas(); *@
     }
+
+    [Parameter]
+    public RenderFragment Cargando { get; set; } = null!;
+
+    [Parameter]
+    public RenderFragment NoHayPelis { get; set; } = null!;
 
     bool MostrarBotones = false;
 

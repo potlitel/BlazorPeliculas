@@ -1,6 +1,13 @@
 ﻿@page "/"
 
-<ListadoPeliculas pelis="ObtenerPeliculas()" />
+<ListadoPeliculas pelis="ObtenerPeliculas()">
+    <Cargando>
+        Cargando datos relacionados con las pelis
+    </Cargando>
+    <NoHayPelis>
+        No HAY!
+    </NoHayPelis>
+</ListadoPeliculas>
 
 <BindAfterDemo />
 
