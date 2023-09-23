@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "nWD2pedqVttOp1b42ONa3wr4sIbJ+zDWGN7WVb+t8WY=",
+  "Hash": "Fs912bGQm7gyhpbl8fKkArLPIMmXuIwtPqboVx3lZ0Q=",
   "Source": "BlazorPeliculas.Server",
   "BasePath": "_content/BlazorPeliculas.Server",
   "Mode": "Default",
@@ -7218,6 +7218,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\index.html"
+    },
+    {
+      "Identity": "G:\\Trabajo\\GitProjects\\Real-Projects\\BlazorPeliculas\\Client\\wwwroot\\js\\Counter.js",
+      "SourceId": "BlazorPeliculas.Client",
+      "SourceType": "Project",
+      "ContentRoot": "G:\\Trabajo\\GitProjects\\Real-Projects\\BlazorPeliculas\\Client\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "js/Counter.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\Counter.js"
     },
     {
       "Identity": "G:\\Trabajo\\GitProjects\\Real-Projects\\BlazorPeliculas\\Client\\wwwroot\\js\\Utilidades.js",

@@ -73,6 +73,10 @@
       "PackagePath": "staticwebassets\\index.html"
     },
     {
+      "Id": "G:\\Trabajo\\GitProjects\\Real-Projects\\BlazorPeliculas\\Client\\wwwroot\\js\\Counter.js",
+      "PackagePath": "staticwebassets\\js\\Counter.js"
+    },
+    {
       "Id": "G:\\Trabajo\\GitProjects\\Real-Projects\\BlazorPeliculas\\Client\\wwwroot\\js\\Utilidades.js",
       "PackagePath": "staticwebassets\\js\\Utilidades.js"
     },
