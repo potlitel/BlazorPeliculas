@@ -1,4 +1,5 @@
 using BlazorPeliculas.Client;
+using BlazorPeliculas.Client.Repositorios;
 using Microsoft.AspNetCore.Components.Web;
 using Microsoft.AspNetCore.Components.WebAssembly.Hosting;
 
@@ -17,4 +18,5 @@ void ConfigureServices(IServiceCollection services)
 {
     services.AddSingleton<ServicioSingleton>();
     services.AddTransient<ServicioTransient>();
+    services.AddSingleton<IRepositorio, Repositorio>();
 }

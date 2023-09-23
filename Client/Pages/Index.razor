@@ -1,4 +1,5 @@
 ﻿@page "/"
+@inject IRepositorio repo
 
 <ListadoPeliculas pelis="pelis">
     @*     <Cargando>
@@ -25,7 +26,7 @@
     protected override void OnInitialized()
     {
         Console.WriteLine("OnInitialized");
-        pelis = ObtenerPeliculas();
+        pelis = repo.ObtenerPeliculas();
     }
 
     List<Pelicula> ObtenerPeliculas()
