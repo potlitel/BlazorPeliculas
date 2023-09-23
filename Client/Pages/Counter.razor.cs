@@ -17,7 +17,8 @@ namespace BlazorPeliculas.Client.Pages
         private int currentCount = 0;
         private static int currentCountStatic = 0;
 
-        private async Task IncrementCount()
+        [JSInvokable]
+        public async Task IncrementCount()
         {
             currentCount++;
             currentCountStatic = currentCount;
@@ -30,6 +31,11 @@ namespace BlazorPeliculas.Client.Pages
         public static Task<int> ObtenerCurrentCount()
         {
             return Task.FromResult(currentCountStatic);
+        }
+
+        private async Task IncrementCountJavascript()
+        {
+            await js.InvokeVoidAsync("pruebaPuntoNetInstancia", DotNetObjectReference.Create(this));
         }
     }
 }
