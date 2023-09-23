@@ -72,6 +72,10 @@ build_metadata.AdditionalFiles.CssScope = b-0daltvssez
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWN0b3Jlc1xFZGl0YXJBY3Rvci5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = b-w7k7zlboki
 
+[G:/Trabajo/GitProjects/Real-Projects/BlazorPeliculas/Client/Pages/Actores/IndiceActores.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWN0b3Jlc1xJbmRpY2VBY3RvcmVzLnJhem9y
+build_metadata.AdditionalFiles.CssScope = b-oihosw1ks8
+
 [G:/Trabajo/GitProjects/Real-Projects/BlazorPeliculas/Client/Pages/Counter.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ291bnRlci5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = b-a2z283tr5e
@@ -83,6 +87,10 @@ build_metadata.AdditionalFiles.CssScope = b-3i80afwlk4
 [G:/Trabajo/GitProjects/Real-Projects/BlazorPeliculas/Client/Pages/Generos/EditarGenero.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcR2VuZXJvc1xFZGl0YXJHZW5lcm8ucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = b-jlrqv9zj00
+
+[G:/Trabajo/GitProjects/Real-Projects/BlazorPeliculas/Client/Pages/Generos/IndiceGeneros.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcR2VuZXJvc1xJbmRpY2VHZW5lcm9zLnJhem9y
+build_metadata.AdditionalFiles.CssScope = b-znprg5c1bt
 
 [G:/Trabajo/GitProjects/Real-Projects/BlazorPeliculas/Client/Pages/Peliculas/CrearPelicula.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUGVsaWN1bGFzXENyZWFyUGVsaWN1bGEucmF6b3I=
