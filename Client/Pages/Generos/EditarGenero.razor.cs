@@ -1,18 +1,12 @@
-﻿using Microsoft.AspNetCore.Components;
-using Microsoft.AspNetCore.Components.Rendering;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-
+using Microsoft.AspNetCore.Components;
 
 namespace BlazorPeliculas.Client.Pages.Generos
 {
     public partial class EditarGenero
     {
-        public EditarGenero()
-        {
+        [Parameter]
+        public int GeneroId { get; set; }
 
-        }
+        public EditarGenero() { }
     }
 }

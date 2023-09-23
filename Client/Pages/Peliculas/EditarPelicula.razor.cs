@@ -1,18 +1,12 @@
-﻿using Microsoft.AspNetCore.Components;
-using Microsoft.AspNetCore.Components.Rendering;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-
+using Microsoft.AspNetCore.Components;
 
 namespace BlazorPeliculas.Client.Pages.Peliculas
 {
     public partial class EditarPelicula
     {
-        public EditarPelicula()
-        {
+        [Parameter]
+        public int PeliculaId { get; set; }
 
-        }
+        public EditarPelicula() { }
     }
 }
