@@ -42,13 +42,18 @@
     else
     { *@
     @* <input type="checkbox" @onchange="(() => MostrarBotones = !MostrarBotones)" /> *@
-    <input type="checkbox" @bind="MostrarBotones" />
-    <span>Mostrar botones</span>
-    <ListadoGenerico listado="pelis">
-        <HayPelis Context="pelicula">
-            <PeliculaIndividual pelicula="pelicula" MostrarBotones="MostrarBotones" EliminarPeli="EliminarPeli" />
-        </HayPelis>
-    </ListadoGenerico>
+    @* <input type="checkbox" @bind="MostrarBotones" />
+    <span>Mostrar botones</span> *@
+
+    <div style="display: flex; flex-wrap: wrap; align-items: center;">
+        <ListadoGenerico listado="pelis">
+            <HayPelis Context="pelicula">
+                @* <PeliculaIndividual pelicula="pelicula" MostrarBotones="MostrarBotones" EliminarPeli="EliminarPeli" /> *@
+                <PeliculaIndividual pelicula="pelicula" />
+            </HayPelis>
+        </ListadoGenerico>
+    </div>
+
     @* @foreach (var pelicula in pelis)
     {
     <PeliculaIndividual pelicula="pelicula" MostrarBotones="MostrarBotones" EliminarPeli="EliminarPeli"/>
