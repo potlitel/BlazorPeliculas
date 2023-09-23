@@ -1,3 +1,4 @@
+using BlazorPeliculas.Client.Helpers;
 using Microsoft.AspNetCore.Components;
 using Microsoft.JSInterop;
 
@@ -13,6 +14,14 @@ namespace BlazorPeliculas.Client.Pages
 
         [Inject]
         private IJSRuntime js { get; set; } = null!;
+
+        //[CascadingParameter(Name = "Color")]
+        //protected string Color { get; set; } = null!;
+
+        //[CascadingParameter(Name = "Size")]
+        //protected string Size { get; set; } = null!;
+        [CascadingParameter]
+        protected AppState AppState { get; set; } = null!;
 
         private IJSObjectReference? modulo;
 
