@@ -1,3 +1,5 @@
+@inject IJSRuntime js
+
 @* expresión implícita *@
 @* <p>Hola, @UtilidadesString.Transformar(nombre)</p> *@
 @* expresión explícita *@
@@ -134,9 +136,14 @@ FechaLanzamiento = new DateTime(2010, 7, 16)
 };
     }
 
-    private void EliminarPeli(Pelicula peliName)
+    private async Task EliminarPeli(Pelicula peliName)
     {
-        Console.WriteLine($"Eliminando la película {peliName.Titulo}");
-        pelis.Remove(peliName);
+        // var confirmado = await js.InvokeAsync<bool>("confirm", $"Desea borrar la película {peliName.Titulo}?");
+        var confirmado = await js.Confirm($"Desea borrar la película {peliName.Titulo}?");
+        if (confirmado)
+        {
+            Console.WriteLine($"Eliminando la película {peliName.Titulo}");
+            pelis.Remove(peliName);
+        }
     }
 }
