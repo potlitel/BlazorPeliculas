@@ -146,4 +146,12 @@ FechaLanzamiento = new DateTime(2010, 7, 16)
             pelis.Remove(peliName);
         }
     }
+
+    public void LimpiarPelis()
+    {
+        if (pelis is not null)
+        {
+            pelis.Clear();
+        }
+    }
 }
