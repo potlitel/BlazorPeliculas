@@ -11,14 +11,17 @@
     <div><button @onclick="(() => EliminarPeli.InvokeAsync(pelicula))">Borrar</button></div>
     } *@
 
-    <a>
+    <a href="@urlPelicula">
         <img src="@pelicula.Poster" alt="Poster" style="width:225px; height:300px" />
-        <p style="max-width: 225px; height: 44px; font-size: 15px; font-weight: bold">@pelicula.Titulo</p>
-        <div>
-            <a class="btn btn-info">Editar</a>
-            <button type="button" class="btn btn-danger" @onclick="(() => EliminarPeli.InvokeAsync(pelicula))">Borrar</button>
-        </div>
     </a>
+    <p style="max-width: 225px; height: 44px; font-size: 15px; font-weight: bold">
+        <a href="@urlPelicula" class="text-decoration-none">@((MarkupString)pelicula.Titulo)</a>
+    </p>
+    <div>
+        <a class="btn btn-info">Editar</a>
+        <button type="button" class="btn btn-danger" @onclick="(() => EliminarPeli.InvokeAsync(pelicula))">Borrar</button>
+    </div>
+
 </div>
 
 
@@ -30,6 +33,12 @@
     public bool MostrarBotones { get; set; } = false;
     [Parameter]
     public EventCallback<Pelicula> EliminarPeli { get; set; }
+    private string urlPelicula = string.Empty;
+
+    protected override void OnInitialized()
+    {
+        urlPelicula = $"pelicula/";
+    }
 
     void Eliminar()
     {

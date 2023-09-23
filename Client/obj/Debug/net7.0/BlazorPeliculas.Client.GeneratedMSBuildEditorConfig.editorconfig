@@ -64,9 +64,37 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = X0ltcG9ydHMucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
+[G:/Trabajo/GitProjects/Real-Projects/BlazorPeliculas/Client/Pages/Actores/CrearActor.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWN0b3Jlc1xDcmVhckFjdG9yLnJhem9y
+build_metadata.AdditionalFiles.CssScope = b-0daltvssez
+
+[G:/Trabajo/GitProjects/Real-Projects/BlazorPeliculas/Client/Pages/Actores/EditarActor.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWN0b3Jlc1xFZGl0YXJBY3Rvci5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = b-w7k7zlboki
+
 [G:/Trabajo/GitProjects/Real-Projects/BlazorPeliculas/Client/Pages/Counter.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ291bnRlci5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = b-a2z283tr5e
+
+[G:/Trabajo/GitProjects/Real-Projects/BlazorPeliculas/Client/Pages/Generos/CrearGenero.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcR2VuZXJvc1xDcmVhckdlbmVyby5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = b-3i80afwlk4
+
+[G:/Trabajo/GitProjects/Real-Projects/BlazorPeliculas/Client/Pages/Generos/EditarGenero.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcR2VuZXJvc1xFZGl0YXJHZW5lcm8ucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = b-jlrqv9zj00
+
+[G:/Trabajo/GitProjects/Real-Projects/BlazorPeliculas/Client/Pages/Peliculas/CrearPelicula.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUGVsaWN1bGFzXENyZWFyUGVsaWN1bGEucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = b-8jyyle1d2v
+
+[G:/Trabajo/GitProjects/Real-Projects/BlazorPeliculas/Client/Pages/Peliculas/EditarPelicula.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUGVsaWN1bGFzXEVkaXRhclBlbGljdWxhLnJhem9y
+build_metadata.AdditionalFiles.CssScope = b-wpmhrvd3os
+
+[G:/Trabajo/GitProjects/Real-Projects/BlazorPeliculas/Client/Pages/Peliculas/VisualizarPelicula.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUGVsaWN1bGFzXFZpc3VhbGl6YXJQZWxpY3VsYS5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = b-2n6ym77meg
 
 [G:/Trabajo/GitProjects/Real-Projects/BlazorPeliculas/Client/Shared/MainLayout.razor]
 build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXE1haW5MYXlvdXQucmF6b3I=
