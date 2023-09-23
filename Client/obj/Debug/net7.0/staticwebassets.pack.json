@@ -73,6 +73,10 @@
       "PackagePath": "staticwebassets\\index.html"
     },
     {
+      "Id": "G:\\Trabajo\\GitProjects\\Real-Projects\\BlazorPeliculas\\Client\\wwwroot\\js\\Utilidades.js",
+      "PackagePath": "staticwebassets\\js\\Utilidades.js"
+    },
+    {
       "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.BlazorPeliculas.Client.Microsoft.AspNetCore.StaticWebAssets.props",
       "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
     },
