@@ -1,4 +1,5 @@
 using BlazorPeliculas.Client.Helpers;
+using MathNet.Numerics.Statistics;
 using Microsoft.AspNetCore.Components;
 using Microsoft.JSInterop;
 
@@ -31,14 +32,19 @@ namespace BlazorPeliculas.Client.Pages
         [JSInvokable]
         public async Task IncrementCount()
         {
-            modulo = await js.InvokeAsync<IJSObjectReference>("import", "./js/Counter.js");
-            await modulo.InvokeVoidAsync("mostrarAlerta", "Hola desde js");
+            //modulo = await js.InvokeAsync<IJSObjectReference>("import", "./js/Counter.js");
+            //await modulo.InvokeVoidAsync("mostrarAlerta", "Hola desde js");
+            var arreglo = new double[] { 1, 2, 3, 4, 5 };
+            var max = arreglo.Maximum();
+            var min = arreglo.Minimum();
 
             currentCount++;
             currentCountStatic = currentCount;
             singleton.valor = currentCount;
             transient.valor = currentCount;
-            await js.InvokeVoidAsync("pruebaPuntoNetStatic");
+            //await js.InvokeVoidAsync("pruebaPuntoNetStatic");
+
+            await js.InvokeVoidAsync("alert", $"El maximo es {max} y el min es {min}");
         }
 
         [JSInvokable]

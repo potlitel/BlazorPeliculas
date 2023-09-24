@@ -16,6 +16,14 @@
           "BlazorPeliculas.Server.dll": {}
         }
       },
+      "MathNet.Numerics/5.0.0": {
+        "runtime": {
+          "lib/net6.0/MathNet.Numerics.dll": {
+            "assemblyVersion": "5.0.0.0",
+            "fileVersion": "5.0.0.0"
+          }
+        }
+      },
       "Microsoft.AspNetCore.Authorization/7.0.9": {
         "dependencies": {
           "Microsoft.AspNetCore.Metadata": "7.0.9",
@@ -216,6 +224,7 @@
       "BlazorPeliculas.Client/1.0.0": {
         "dependencies": {
           "BlazorPeliculas.Shared": "1.0.0",
+          "MathNet.Numerics": "5.0.0",
           "Microsoft.AspNetCore.Components.WebAssembly": "7.0.9"
         },
         "runtime": {
@@ -234,6 +243,13 @@
       "type": "project",
       "serviceable": false,
       "sha512": ""
+    },
+    "MathNet.Numerics/5.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-pg1W2VwaEQMAiTpGK840hZgzavnqjlCMTVSbtVCXVyT+7AX4mc1o89SPv4TBlAjhgCOo9c1Y+jZ5m3ti2YgGgA==",
+      "path": "mathnet.numerics/5.0.0",
+      "hashPath": "mathnet.numerics.5.0.0.nupkg.sha512"
     },
     "Microsoft.AspNetCore.Authorization/7.0.9": {
       "type": "package",

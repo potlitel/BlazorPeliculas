@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "Fs912bGQm7gyhpbl8fKkArLPIMmXuIwtPqboVx3lZ0Q=",
+  "Hash": "IGlYSvJCcaLgL661/GHdwpWlH40Z8W84mUlFC3Nxfs0=",
   "Source": "BlazorPeliculas.Server",
   "BasePath": "_content/BlazorPeliculas.Server",
   "Mode": "Default",
@@ -248,6 +248,23 @@
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
       "OriginalItemSpec": "C:\\Users\\potlitel\\.nuget\\packages\\microsoft.netcore.app.runtime.mono.browser-wasm\\7.0.11\\runtimes\\browser-wasm\\native\\icudt_no_CJK.dat"
+    },
+    {
+      "Identity": "G:\\Trabajo\\GitProjects\\Real-Projects\\BlazorPeliculas\\Client\\bin\\Debug\\net7.0\\wwwroot\\_framework\\MathNet.Numerics.dll",
+      "SourceId": "BlazorPeliculas.Client",
+      "SourceType": "Project",
+      "ContentRoot": "G:\\Trabajo\\GitProjects\\Real-Projects\\BlazorPeliculas\\Client\\bin\\Debug\\net7.0\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "_framework/MathNet.Numerics.dll",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "BlazorWebAssemblyResource",
+      "AssetTraitValue": "runtime",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "C:\\Users\\potlitel\\.nuget\\packages\\mathnet.numerics\\5.0.0\\lib\\net6.0\\MathNet.Numerics.dll"
     },
     {
       "Identity": "G:\\Trabajo\\GitProjects\\Real-Projects\\BlazorPeliculas\\Client\\bin\\Debug\\net7.0\\wwwroot\\_framework\\Microsoft.AspNetCore.Authorization.dll",
@@ -3648,6 +3665,23 @@
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
       "OriginalItemSpec": "G:\\Trabajo\\GitProjects\\Real-Projects\\BlazorPeliculas\\Client\\bin\\Debug\\net7.0\\wwwroot\\_framework\\Microsoft.Win32.Registry.dll"
+    },
+    {
+      "Identity": "G:\\Trabajo\\GitProjects\\Real-Projects\\BlazorPeliculas\\Client\\obj\\Debug\\net7.0\\build-gz\\+xCKFP1W.gz",
+      "SourceId": "BlazorPeliculas.Client",
+      "SourceType": "Project",
+      "ContentRoot": "G:\\Trabajo\\GitProjects\\Real-Projects\\BlazorPeliculas\\Client\\bin\\Debug\\net7.0\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "_framework/MathNet.Numerics.dll.gz",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "RelatedAsset": "G:\\Trabajo\\GitProjects\\Real-Projects\\BlazorPeliculas\\Client\\bin\\Debug\\net7.0\\wwwroot\\_framework\\MathNet.Numerics.dll",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "G:\\Trabajo\\GitProjects\\Real-Projects\\BlazorPeliculas\\Client\\bin\\Debug\\net7.0\\wwwroot\\_framework\\MathNet.Numerics.dll"
     },
     {
       "Identity": "G:\\Trabajo\\GitProjects\\Real-Projects\\BlazorPeliculas\\Client\\obj\\Debug\\net7.0\\build-gz\\082xiPCn.gz",

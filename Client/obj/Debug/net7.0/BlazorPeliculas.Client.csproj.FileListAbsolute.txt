@@ -844,3 +844,7 @@ G:\Trabajo\GitProjects\Real-Projects\BlazorPeliculas\Client\obj\Debug\net7.0\sco
 G:\Trabajo\GitProjects\Real-Projects\BlazorPeliculas\Client\obj\Debug\net7.0\scopedcss\Pages\Peliculas\VisualizarPelicula.razor.rz.scp.css
 G:\Trabajo\GitProjects\Real-Projects\BlazorPeliculas\Client\obj\Debug\net7.0\scopedcss\Pages\Actores\IndiceActores.razor.rz.scp.css
 G:\Trabajo\GitProjects\Real-Projects\BlazorPeliculas\Client\obj\Debug\net7.0\scopedcss\Pages\Generos\IndiceGeneros.razor.rz.scp.css
+G:\Trabajo\GitProjects\Real-Projects\BlazorPeliculas\Client\bin\Debug\net7.0\wwwroot\_framework\MathNet.Numerics.dll
+G:\Trabajo\GitProjects\Real-Projects\BlazorPeliculas\Client\bin\Debug\net7.0\wwwroot\_framework\MathNet.Numerics.dll.gz
+G:\Trabajo\GitProjects\Real-Projects\BlazorPeliculas\Client\bin\Debug\net7.0\MathNet.Numerics.dll
+G:\Trabajo\GitProjects\Real-Projects\BlazorPeliculas\Client\obj\Debug\net7.0\build-gz\+xCKFP1W.gz
