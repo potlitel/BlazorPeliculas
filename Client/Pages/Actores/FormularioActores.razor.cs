@@ -8,6 +8,7 @@ namespace BlazorPeliculas.Client.Pages.Actores
 {
     public partial class FormularioActores
     {
+        private string? imgUrl;
         private EditContext editContext = null!;
 
         [EditorRequired]
@@ -23,6 +24,17 @@ namespace BlazorPeliculas.Client.Pages.Actores
         protected override void OnInitialized()
         {
             editContext = new EditContext(Actor);
+            if (!string.IsNullOrEmpty(Actor.Foto))
+            {
+                imgUrl = Actor.Foto;
+                Actor.Foto = null;
+            }
+        }
+
+        private void ImgSeleccionada(string imagenBase64)
+        {
+            Actor.Foto = imagenBase64;
+            imgUrl = null;
         }
 
         private async Task OnBeforeInternalNavigation(LocationChangingContext context)
