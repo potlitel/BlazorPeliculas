@@ -54,3 +54,4 @@ G:\Trabajo\GitProjects\Real-Projects\BlazorPeliculas\Server\obj\Debug\net7.0\Bla
 G:\Trabajo\GitProjects\Real-Projects\BlazorPeliculas\Server\obj\Debug\net7.0\BlazorPeliculas.Server.genruntimeconfig.cache
 G:\Trabajo\GitProjects\Real-Projects\BlazorPeliculas\Server\obj\Debug\net7.0\ref\BlazorPeliculas.Server.dll
 G:\Trabajo\GitProjects\Real-Projects\BlazorPeliculas\Server\bin\Debug\net7.0\MathNet.Numerics.dll
+G:\Trabajo\GitProjects\Real-Projects\BlazorPeliculas\Server\bin\Debug\net7.0\CurrieTechnologies.Razor.SweetAlert2.dll

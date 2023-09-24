@@ -16,6 +16,18 @@
           "BlazorPeliculas.Server.dll": {}
         }
       },
+      "CurrieTechnologies.Razor.SweetAlert2/5.5.0": {
+        "dependencies": {
+          "Microsoft.AspNetCore.Components": "7.0.9",
+          "Microsoft.AspNetCore.Components.Web": "7.0.9"
+        },
+        "runtime": {
+          "lib/net7.0/CurrieTechnologies.Razor.SweetAlert2.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
       "MathNet.Numerics/5.0.0": {
         "runtime": {
           "lib/net6.0/MathNet.Numerics.dll": {
@@ -224,6 +236,7 @@
       "BlazorPeliculas.Client/1.0.0": {
         "dependencies": {
           "BlazorPeliculas.Shared": "1.0.0",
+          "CurrieTechnologies.Razor.SweetAlert2": "5.5.0",
           "MathNet.Numerics": "5.0.0",
           "Microsoft.AspNetCore.Components.WebAssembly": "7.0.9"
         },
@@ -243,6 +256,13 @@
       "type": "project",
       "serviceable": false,
       "sha512": ""
+    },
+    "CurrieTechnologies.Razor.SweetAlert2/5.5.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-Mpo8yNWeUcFesm/d0vA2X/4TloKbXUszWo3u4OtDQvo9cj+zYVOIuB/ZKBL+alIMp1FViImU9BjJocwkIRXVWg==",
+      "path": "currietechnologies.razor.sweetalert2/5.5.0",
+      "hashPath": "currietechnologies.razor.sweetalert2.5.5.0.nupkg.sha512"
     },
     "MathNet.Numerics/5.0.0": {
       "type": "package",

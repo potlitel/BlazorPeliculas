@@ -1,5 +1,5 @@
-using BlazorPeliculas.Client.Helpers;
 using BlazorPeliculas.Shared.Entidades;
+using CurrieTechnologies.Razor.SweetAlert2;
 using Microsoft.AspNetCore.Components;
 using Microsoft.AspNetCore.Components.Forms;
 using Microsoft.AspNetCore.Components.Routing;
@@ -39,7 +39,18 @@ namespace BlazorPeliculas.Client.Pages.Generos
                 return;
             }
 
-            var confirmado = await js.Confirm("Desea salir del form y perder los cambios?");
+            //var confirmado = await js.Confirm("Desea salir del form y perder los cambios?");
+            var resultado = await swal.FireAsync(
+                new SweetAlertOptions
+                {
+                    Title = "Confirmación",
+                    Text = "Desea salir del form y perder los cambios?",
+                    ShowCancelButton = true,
+                    Icon = SweetAlertIcon.Warning
+                }
+            );
+
+            var confirmado = !string.IsNullOrEmpty(resultado.Value);
 
             if (confirmado)
             {
