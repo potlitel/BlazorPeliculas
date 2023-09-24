@@ -1,6 +1,7 @@
 ﻿@page "/generos/crear"
+@inject NavigationManager navigationManager
 
 <div>
     <h3>Crear Género</h3>
-    <FormularioGenero Genero="Genero" OnValidSubmit="Crear" />
+    <FormularioGenero @ref="formGenero" Genero="Genero" OnValidSubmit="Crear" />
 </div>

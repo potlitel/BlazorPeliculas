@@ -8,8 +8,9 @@ namespace BlazorPeliculas.Client.Pages.Generos
         [Parameter]
         public int GeneroId { get; set; }
 
-        public EditarGenero()
-        { }
+        public EditarGenero() { }
+
+        private FormularioGenero? formGenero;
 
         private Genero? Genero;
 
@@ -20,9 +21,11 @@ namespace BlazorPeliculas.Client.Pages.Generos
 
         private void Editar()
         {
+            formGenero!.FormularioPosteadoConExito = true;
             Console.WriteLine("Editando Género de Película");
             Console.WriteLine($"Id: {Genero!.Id}");
             Console.WriteLine($"Nombre: {Genero!.Nombre}");
+            navigationManager.NavigateTo("generos");
         }
     }
 }

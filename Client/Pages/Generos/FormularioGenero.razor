@@ -1,4 +1,8 @@
-﻿<EditForm Model="Genero" OnValidSubmit="OnValidSubmit">
+﻿@inject IJSRuntime js
+
+<NavigationLock OnBeforeInternalNavigation="OnBeforeInternalNavigation"></NavigationLock>
+
+<EditForm EditContext="editContext" OnValidSubmit="OnValidSubmit">
     <DataAnnotationsValidator />
     <div class="mb-3">
         <label>Nombre:</label>

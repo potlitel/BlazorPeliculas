@@ -1,6 +1,7 @@
 ﻿@page "/generos/editar/{GeneroId:int}"
+@inject NavigationManager navigationManager
 
 <div>
     <h3>Editar Género</h3>
-    <FormularioGenero Genero="Genero" OnValidSubmit="Editar" />
+    <FormularioGenero @ref="formGenero" Genero="Genero" OnValidSubmit="Editar" />
 </div>
