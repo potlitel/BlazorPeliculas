@@ -1,0 +1,43 @@
+﻿@page "/peliculas/buscar"
+@inject IRepositorio repositorio
+
+<h3>Filtro películas</h3>
+
+<div class="row g-3 align-items-center mb-3">
+    <div class="col-sm-3">
+        <input type="text" class="form-control" id="titulo" placeholder="Título película" @bind-value="titulo" @bind-value:event="oninput"
+        @onkeypress="@((KeyboardEventArgs e) => TituloKeyPress(e))" />
+    </div>
+
+    <div class="col-sm-3">
+        <select class="form-select" @bind="generoSeleccionado">
+            <option value="0">-- Seleccione género --</option>
+            @foreach (var item in generos)
+            {
+                <option value="@item.Id">@item.Nombre</option>
+            }
+        </select>
+    </div>
+
+    <div class="col-sm-6" style="display: flex">
+        <div class="form-check me-2">
+            <input type="checkbox" class="form-check-input" id="estrenos" @bind="futurosEstrenos" />
+            <label class="form-check-label" for="estrenos">Futuros estrenos</label>
+        </div>
+        <div class="form-check me-2">
+            <input type="checkbox" class="form-check-input" id="cartelera" @bind="enCartelera" />
+            <label class="form-check-label" for="cartelera">En Cartelera</label>
+        </div>
+        <div class="form-check">
+            <input type="checkbox" class="form-check-input" id="masVotadas" @bind="masVotadas" />
+            <label class="form-check-label" for="masVotadas">Más Votadas</label>
+        </div>
+    </div>
+
+    <div class="col-12">
+        <button type="button" class="btn btn-primary" @onclick="CargarNuevasPeliculas">Filtrar</button>
+        <button type="button" class="btn btn-danger" @onclick="LimpiarCampos">Limpiar</button>
+    </div>
+
+    <ListadoPeliculas pelis="peliculas"></ListadoPeliculas>
+</div>

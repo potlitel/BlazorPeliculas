@@ -853,3 +853,4 @@ G:\Trabajo\GitProjects\Real-Projects\BlazorPeliculas\Client\bin\Debug\net7.0\www
 G:\Trabajo\GitProjects\Real-Projects\BlazorPeliculas\Client\bin\Debug\net7.0\wwwroot\_framework\CurrieTechnologies.Razor.SweetAlert2.dll.gz
 G:\Trabajo\GitProjects\Real-Projects\BlazorPeliculas\Client\bin\Debug\net7.0\CurrieTechnologies.Razor.SweetAlert2.dll
 G:\Trabajo\GitProjects\Real-Projects\BlazorPeliculas\Client\obj\Debug\net7.0\build-gz\S79iLcQr.gz
+G:\Trabajo\GitProjects\Real-Projects\BlazorPeliculas\Client\obj\Debug\net7.0\scopedcss\Pages\Peliculas\FiltroPeliculas.razor.rz.scp.css
