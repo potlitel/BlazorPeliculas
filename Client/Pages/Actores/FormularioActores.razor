@@ -1,0 +1,29 @@
+﻿@inject SweetAlertService swal
+
+<NavigationLock OnBeforeInternalNavigation="OnBeforeInternalNavigation"></NavigationLock>
+
+<EditForm EditContext="editContext" OnValidSubmit="OnValidSubmit">
+    <DataAnnotationsValidator />
+    <div class="mb-3">
+        <label>Nombre:</label>
+        <div>
+            <InputText class="form-control" @bind-Value="@Actor.Nombre"></InputText>
+            <ValidationMessage For="@(() => Actor.Nombre)" />
+        </div>
+    </div>
+
+    <div class="mb-3">
+        <label>Fecha nacimiento:</label>
+        <div>
+            <InputDate class="form-control" @bind-Value="@Actor.FechaNacimiento"></InputDate>
+            <ValidationMessage For="@(() => Actor.FechaNacimiento)" />
+        </div>
+    </div>
+
+    <div class="mb-3"></div>
+
+    <div class="mb-3"></div>
+
+    <button class="btn btn-success" type="submit">Guardar cambios</button>
+
+</EditForm>

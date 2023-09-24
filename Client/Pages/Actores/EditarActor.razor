@@ -1,4 +1,7 @@
 ﻿@page "/actores/editar/{ActorId:int}"
+@inject NavigationManager navigationManager
 
 <div>
+    <h3>Editar Género</h3>
+    <FormularioActores @ref="formActor" Actor="Actor" OnValidSubmit="Editar" />
 </div>
