@@ -48,6 +48,10 @@
               "target": "Package",
               "version": "[5.5.0, )"
             },
+            "Markdig": {
+              "target": "Package",
+              "version": "[0.33.0, )"
+            },
             "MathNet.Numerics": {
               "target": "Package",
               "version": "[5.0.0, )"

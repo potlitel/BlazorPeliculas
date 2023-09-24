@@ -24,7 +24,9 @@
         <CustomInputImg Label="Foto" imagenSeleccionada="ImgSeleccionada" imagenUrl="@imgUrl" />
     </div>
 
-    <div class="mb-3"></div>
+    <div class="mb-3 form-markdown">
+        <InputMarkdown @bind-Value="@Actor.Biografia" For=@(() => Actor.Biografia) Label="Biografía" />
+    </div>
 
     <button class="btn btn-success" type="submit">Guardar cambios</button>
 

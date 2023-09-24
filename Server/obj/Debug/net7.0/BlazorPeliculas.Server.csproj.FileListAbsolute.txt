@@ -55,3 +55,4 @@ G:\Trabajo\GitProjects\Real-Projects\BlazorPeliculas\Server\obj\Debug\net7.0\Bla
 G:\Trabajo\GitProjects\Real-Projects\BlazorPeliculas\Server\obj\Debug\net7.0\ref\BlazorPeliculas.Server.dll
 G:\Trabajo\GitProjects\Real-Projects\BlazorPeliculas\Server\bin\Debug\net7.0\MathNet.Numerics.dll
 G:\Trabajo\GitProjects\Real-Projects\BlazorPeliculas\Server\bin\Debug\net7.0\CurrieTechnologies.Razor.SweetAlert2.dll
+G:\Trabajo\GitProjects\Real-Projects\BlazorPeliculas\Server\bin\Debug\net7.0\Markdig.dll

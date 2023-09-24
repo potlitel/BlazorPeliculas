@@ -16,6 +16,7 @@
 /* /Pages/Peliculas/FiltroPeliculas.razor.rz.scp.css */
 /* /Pages/Peliculas/VisualizarPelicula.razor.rz.scp.css */
 /* /Shared/CustomInputImg.razor.rz.scp.css */
+/* /Shared/InputMarkdown.razor.rz.scp.css */
 /* /Shared/MainLayout.razor.rz.scp.css */
 .page[b-r03re2dpic] {
     position: relative;
@@ -98,6 +99,7 @@ main[b-r03re2dpic] {
         padding-right: 1.5rem !important;
     }
 }
+/* /Shared/MostrarMarkdown.razor.rz.scp.css */
 /* /Shared/NavMenu.razor.rz.scp.css */
 .navbar-toggler[b-bghibg8178] {
     background-color: rgba(255, 255, 255, 0.1);

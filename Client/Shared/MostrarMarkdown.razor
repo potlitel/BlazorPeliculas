@@ -1,0 +1,13 @@
+﻿<div>
+    @if (string.IsNullOrEmpty(ContenidoHTML))
+    {
+        if (PlantillaCarga is not null)
+        {
+            @PlantillaCarga
+        }
+    }
+    else
+    {
+        @((MarkupString)ContenidoHTML)
+    }
+</div>
