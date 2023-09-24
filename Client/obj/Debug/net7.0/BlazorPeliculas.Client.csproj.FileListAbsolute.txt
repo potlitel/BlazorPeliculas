@@ -848,3 +848,4 @@ G:\Trabajo\GitProjects\Real-Projects\BlazorPeliculas\Client\bin\Debug\net7.0\www
 G:\Trabajo\GitProjects\Real-Projects\BlazorPeliculas\Client\bin\Debug\net7.0\wwwroot\_framework\MathNet.Numerics.dll.gz
 G:\Trabajo\GitProjects\Real-Projects\BlazorPeliculas\Client\bin\Debug\net7.0\MathNet.Numerics.dll
 G:\Trabajo\GitProjects\Real-Projects\BlazorPeliculas\Client\obj\Debug\net7.0\build-gz\+xCKFP1W.gz
+G:\Trabajo\GitProjects\Real-Projects\BlazorPeliculas\Client\obj\Debug\net7.0\scopedcss\Pages\Generos\FormularioGenero.razor.rz.scp.css

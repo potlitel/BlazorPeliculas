@@ -88,6 +88,10 @@ build_metadata.AdditionalFiles.CssScope = b-3i80afwlk4
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcR2VuZXJvc1xFZGl0YXJHZW5lcm8ucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = b-jlrqv9zj00
 
+[G:/Trabajo/GitProjects/Real-Projects/BlazorPeliculas/Client/Pages/Generos/FormularioGenero.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcR2VuZXJvc1xGb3JtdWxhcmlvR2VuZXJvLnJhem9y
+build_metadata.AdditionalFiles.CssScope = b-fdlasvh1f7
+
 [G:/Trabajo/GitProjects/Real-Projects/BlazorPeliculas/Client/Pages/Generos/IndiceGeneros.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcR2VuZXJvc1xJbmRpY2VHZW5lcm9zLnJhem9y
 build_metadata.AdditionalFiles.CssScope = b-znprg5c1bt
