@@ -23,7 +23,7 @@ namespace BlazorPeliculas.Client.Pages.Actores
 
         protected override void OnInitialized()
         {
-            editContext = new EditContext(Actor);
+            //editContext = new EditContext(Actor);
             if (!string.IsNullOrEmpty(Actor.Foto))
             {
                 imgUrl = Actor.Foto;

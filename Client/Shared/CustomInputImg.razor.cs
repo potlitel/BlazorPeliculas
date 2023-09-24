@@ -5,13 +5,13 @@ namespace BlazorPeliculas.Client.Shared
 {
     public partial class CustomInputImg
     {
-        private string? imagenUrl;
+        //private string? imagenUrl;
 
         [Parameter]
         public string Label { get; set; } = "Image";
 
         [Parameter]
-        public string? imgUrl { get; set; }
+        public string? imagenUrl { get; set; }
 
         [Parameter]
         public EventCallback<string> imagenSeleccionada { get; set; }
@@ -26,8 +26,9 @@ namespace BlazorPeliculas.Client.Shared
                 var arrBytes = new byte[img.Size];
                 await img.OpenReadStream().ReadAsync(arrBytes);
                 imagenBase64 = Convert.ToBase64String(arrBytes);
-                imgUrl = null;
+                imagenUrl = null;
                 await imagenSeleccionada.InvokeAsync(imagenBase64);
+                Console.WriteLine(imagenBase64);
                 StateHasChanged();
             }
         }

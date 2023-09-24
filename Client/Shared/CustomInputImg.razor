@@ -1,7 +1,7 @@
 ﻿<div>
     <label>@Label</label>
     <div>
-        <InputFile accept=".jpg,.jpeg,.png" />
+        <InputFile accept=".jpg,.jpeg,.png" OnChange="OnChange" />
     </div>
 
     <div>
@@ -14,11 +14,11 @@
             </div>
         }
 
-        @if (imgUrl is not null)
+        @if (imagenUrl is not null)
         {
             <div>
                 <div style="margin: 10px">
-                    <img src="@imgUrl" style="width:400px" />
+                    <img src="@imagenUrl" style="width:400px" />
                 </div>
             </div>
         }

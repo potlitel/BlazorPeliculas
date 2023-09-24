@@ -2,7 +2,7 @@
 
 <NavigationLock OnBeforeInternalNavigation="OnBeforeInternalNavigation"></NavigationLock>
 
-<EditForm EditContext="editContext" OnValidSubmit="OnValidSubmit">
+<EditForm Model="Actor" OnValidSubmit="OnValidSubmit">
     <DataAnnotationsValidator />
     <div class="mb-3">
         <label>Nombre:</label>
@@ -21,7 +21,7 @@
     </div>
 
     <div class="mb-3">
-        <CustomInputImg Label="Foto" imagenSeleccionada="ImgSeleccionada" imgUrl="@imgUrl" />
+        <CustomInputImg Label="Foto" imagenSeleccionada="ImgSeleccionada" imagenUrl="@imgUrl" />
     </div>
 
     <div class="mb-3"></div>
