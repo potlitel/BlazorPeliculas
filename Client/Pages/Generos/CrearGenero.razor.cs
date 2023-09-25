@@ -18,7 +18,8 @@ namespace BlazorPeliculas.Client.Pages.Generos
 
             if (httpResponse.Error)
             {
-                await swal.FireAsync("Error", "Hubo un error", SweetAlertIcon.Error);
+                var msgError = await httpResponse.ObtenerMensajeError();
+                await swal.FireAsync("Error", msgError, SweetAlertIcon.Error);
             }
             else
             {

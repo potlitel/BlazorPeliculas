@@ -1,4 +1,5 @@
 using BlazorPeliculas.Shared.Entidades;
+using CurrieTechnologies.Razor.SweetAlert2;
 
 namespace BlazorPeliculas.Client.Pages.Actores
 {
@@ -8,12 +9,22 @@ namespace BlazorPeliculas.Client.Pages.Actores
 
         private FormularioActores? formActor;
 
-        private void Crear()
+        private async Task Crear()
         {
-            formActor!.FormularioPosteadoConExito = true;
-            Console.WriteLine("Ejecutando método Crear");
-            Console.WriteLine($"Nombre del actor: {Actor.Nombre}");
-            navigationManager.NavigateTo("actores");
+            var httpResponse = await repositorio.Post("api/actores", Actor);
+
+            if (httpResponse.Error)
+            {
+                var msgError = await httpResponse.ObtenerMensajeError();
+                await swal.FireAsync("Error", msgError, SweetAlertIcon.Error);
+            }
+            else
+            {
+                formActor!.FormularioPosteadoConExito = true;
+                Console.WriteLine("Ejecutando método Crear");
+                Console.WriteLine($"Nombre del actor: {Actor.Nombre}");
+                navigationManager.NavigateTo("actores");
+            }
         }
     }
 }
