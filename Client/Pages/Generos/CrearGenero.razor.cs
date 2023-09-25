@@ -1,4 +1,5 @@
 using BlazorPeliculas.Shared.Entidades;
+using CurrieTechnologies.Razor.SweetAlert2;
 
 namespace BlazorPeliculas.Client.Pages.Generos
 {
@@ -8,14 +9,24 @@ namespace BlazorPeliculas.Client.Pages.Generos
 
         private FormularioGenero? formGenero;
 
-        public CrearGenero() { }
+        public CrearGenero()
+        { }
 
-        private void Crear()
+        private async Task Crear()
         {
-            formGenero!.FormularioPosteadoConExito = true;
-            Console.WriteLine("Ejecutando método Crear");
-            Console.WriteLine($"Nombre del género: {Genero.Nombre}");
-            navigationManager.NavigateTo("generos");
+            var httpResponse = await repositorio.Post("api/generos", Genero);
+
+            if (httpResponse.Error)
+            {
+                await swal.FireAsync("Error", "Hubo un error", SweetAlertIcon.Error);
+            }
+            else
+            {
+                formGenero!.FormularioPosteadoConExito = true;
+                Console.WriteLine("Ejecutando método Crear");
+                Console.WriteLine($"Nombre del género: {Genero.Nombre}");
+                navigationManager.NavigateTo("generos");
+            }
         }
     }
 }

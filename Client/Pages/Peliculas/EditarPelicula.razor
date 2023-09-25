@@ -1,4 +1,7 @@
 ﻿@page "/peliculas/editar/{PeliculaId:int}"
+@inject NavigationManager navigationManager
 
 <div>
+    <h3>Editar Película</h3>
+    <FormularioPeliculas @ref="formPelicula" Pelicula="Pelicula" OnValidSubmit="Editar" />
 </div>

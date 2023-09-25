@@ -862,3 +862,4 @@ G:\Trabajo\GitProjects\Real-Projects\BlazorPeliculas\Client\bin\Debug\net7.0\Mar
 G:\Trabajo\GitProjects\Real-Projects\BlazorPeliculas\Client\obj\Debug\net7.0\build-gz\dG1sW0nC.gz
 G:\Trabajo\GitProjects\Real-Projects\BlazorPeliculas\Client\obj\Debug\net7.0\scopedcss\Shared\InputMarkdown.razor.rz.scp.css
 G:\Trabajo\GitProjects\Real-Projects\BlazorPeliculas\Client\obj\Debug\net7.0\scopedcss\Shared\MostrarMarkdown.razor.rz.scp.css
+G:\Trabajo\GitProjects\Real-Projects\BlazorPeliculas\Client\obj\Debug\net7.0\scopedcss\Pages\Peliculas\FormularioPeliculas.razor.rz.scp.css

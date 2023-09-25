@@ -200,8 +200,8 @@
       "mscorlib.dll": "sha256-X+o60j6cZnlI2vFFjdH81yYTAxx13\/wqnNSWTKbDsyw=",
       "netstandard.dll": "sha256-Cr6slBs\/R2v2t\/vecFDHbQHakbEhar0adYu0YemwiXI=",
       "System.Private.CoreLib.dll": "sha256-dDw5nzGJhW1jOjGfSJcs\/Mi4KQ+DZygXnoK+vJ+jHyk=",
-      "BlazorPeliculas.Shared.dll": "sha256-9VWWJqSl0ixp5dUFkVEs4Ym2wvSyP4hwaeptuHsuV9k=",
-      "BlazorPeliculas.Client.dll": "sha256-eNVYuwTP\/aRwSc5dLfK++Z4JHXVRQjKWvGcVTthqsDk="
+      "BlazorPeliculas.Shared.dll": "sha256-BeuOep3UUuLVwycTi7a4wcL\/YIoi5LVW8cgpIFtU3G0=",
+      "BlazorPeliculas.Client.dll": "sha256-rr1EPInjY6WOVhF3Rqe6eyouZs6jy7l3bqlbaZss+2E="
     },
     "extensions": null,
     "lazyAssembly": {
@@ -209,8 +209,8 @@
     },
     "libraryInitializers": null,
     "pdb": {
-      "BlazorPeliculas.Shared.pdb": "sha256-c7AiewNLOGOHuiPHiGlluKoDEgaoC6ME3vDt9BrQWW4=",
-      "BlazorPeliculas.Client.pdb": "sha256-seGySdfOADAkJ+FL\/07DDDvZhC3eg7Cj5IuxD\/K8Fmw="
+      "BlazorPeliculas.Shared.pdb": "sha256-OCwQw8ZPuvG91ZsBlISEGI\/GkCorqlbZE2stCecHs8A=",
+      "BlazorPeliculas.Client.pdb": "sha256-2MgIpmjXnFNzvEpLC6RHdoE2qv5QpF4mFiwdwpkB3ls="
     },
     "runtime": {
       "dotnet.7.0.11.8xrdjdt61l.js": "sha256-RtIVigdAD1mUvR4pxoKyD8kcQgw4INP81v+PVSqkeQY=",

@@ -112,6 +112,10 @@ build_metadata.AdditionalFiles.CssScope = b-wpmhrvd3os
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUGVsaWN1bGFzXEZpbHRyb1BlbGljdWxhcy5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = b-f6n7c1pr7h
 
+[G:/Trabajo/GitProjects/Real-Projects/BlazorPeliculas/Client/Pages/Peliculas/FormularioPeliculas.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUGVsaWN1bGFzXEZvcm11bGFyaW9QZWxpY3VsYXMucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = b-ypsgrek0ih
+
 [G:/Trabajo/GitProjects/Real-Projects/BlazorPeliculas/Client/Pages/Peliculas/VisualizarPelicula.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUGVsaWN1bGFzXFZpc3VhbGl6YXJQZWxpY3VsYS5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = b-2n6ym77meg

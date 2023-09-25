@@ -20,5 +20,5 @@ void ConfigureServices(IServiceCollection services)
     services.AddSweetAlert2();
     services.AddSingleton<ServicioSingleton>();
     services.AddTransient<ServicioTransient>();
-    services.AddSingleton<IRepositorio, Repositorio>();
+    services.AddScoped<IRepositorio, Repositorio>();
 }

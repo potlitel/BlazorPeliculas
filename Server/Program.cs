@@ -1,9 +1,16 @@
+using BlazorPeliculas.Server;
+using Microsoft.EntityFrameworkCore;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 
 builder.Services.AddControllersWithViews();
 builder.Services.AddRazorPages();
+
+builder.Services.AddDbContext<ApplicationDBContext>(
+    opt => opt.UseSqlServer("name=DefaultConnection")
+);
 
 var app = builder.Build();
 
@@ -25,7 +32,6 @@ app.UseBlazorFrameworkFiles();
 app.UseStaticFiles();
 
 app.UseRouting();
-
 
 app.MapRazorPages();
 app.MapControllers();

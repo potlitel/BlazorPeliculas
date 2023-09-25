@@ -1,0 +1,41 @@
+﻿@inject SweetAlertService swal
+
+<NavigationLock OnBeforeInternalNavigation="OnBeforeInternalNavigation"></NavigationLock>
+
+<EditForm Model="Pelicula" OnValidSubmit="OnValidSubmit">
+    <DataAnnotationsValidator />
+    <div class="mb-3">
+        <label>Título:</label>
+        <div>
+            <InputText class="form-control" @bind-Value="@Pelicula.Titulo"></InputText>
+            <ValidationMessage For="@(() => Pelicula.Titulo)" />
+        </div>
+    </div>
+
+    <div class="mb-3">
+        <label>En cartelera:</label>
+        <div>
+            <InputCheckbox @bind-Value="@Pelicula.EnCartelera"></InputCheckbox>
+            <ValidationMessage For="@(() => Pelicula.EnCartelera)" />
+        </div>
+    </div>
+
+    <div class="mb-3">
+        <label>Fecha de lanzamiento:</label>
+        <div>
+            <InputDate class="form-control" @bind-Value="@Pelicula.FechaLanzamiento"></InputDate>
+            <ValidationMessage For="@(() => Pelicula.FechaLanzamiento)" />
+        </div>
+    </div>
+
+    <div class="mb-3">
+        <CustomInputImg Label="Poster" imagenSeleccionada="ImgSeleccionada" imagenUrl="@imgUrl" />
+    </div>
+
+    <div class="mb-3 form-markdown">
+        <InputMarkdown @bind-Value="@Pelicula.Resumen" For=@(() => Pelicula.Resumen) Label="Biografía" />
+    </div>
+
+    <button class="btn btn-success" type="submit">Guardar cambios</button>
+
+</EditForm>
