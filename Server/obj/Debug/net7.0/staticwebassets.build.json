@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "83ktGR8/YO8d/QgbLrvu8H3K2rUqePdlqaSyz7urI0s=",
+  "Hash": "vvHYGr5k70uHVtQ8Aec5Q7FdqKXQMNalqlli/P4P6U0=",
   "Source": "BlazorPeliculas.Server",
   "BasePath": "_content/BlazorPeliculas.Server",
   "Mode": "Default",
@@ -24,6 +24,13 @@
       "Source": "BlazorPeliculas.Client",
       "ContentRoot": "G:\\Trabajo\\GitProjects\\Real-Projects\\BlazorPeliculas\\Client\\wwwroot\\",
       "BasePath": "/",
+      "Pattern": "**"
+    },
+    {
+      "Name": "BlazorPeliculas.Server\\wwwroot",
+      "Source": "BlazorPeliculas.Server",
+      "ContentRoot": "G:\\Trabajo\\GitProjects\\Real-Projects\\BlazorPeliculas\\Server\\wwwroot\\",
+      "BasePath": "_content/BlazorPeliculas.Server",
       "Pattern": "**"
     }
   ],

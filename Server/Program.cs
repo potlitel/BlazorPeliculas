@@ -1,4 +1,5 @@
 using BlazorPeliculas.Server;
+using BlazorPeliculas.Server.Helpers;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -11,6 +12,9 @@ builder.Services.AddRazorPages();
 builder.Services.AddDbContext<ApplicationDBContext>(
     opt => opt.UseSqlServer("name=DefaultConnection")
 );
+
+builder.Services.AddTransient<IAlmacenadorArchivos, AlmacenadorArchivosLocal>();
+builder.Services.AddHttpContextAccessor();
 
 var app = builder.Build();
 
