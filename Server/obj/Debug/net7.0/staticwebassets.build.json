@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "vvHYGr5k70uHVtQ8Aec5Q7FdqKXQMNalqlli/P4P6U0=",
+  "Hash": "K7iXxLDNd4sP5iteufNElLVpPhtAYqGIY/cQtBZ7SeA=",
   "Source": "BlazorPeliculas.Server",
   "BasePath": "_content/BlazorPeliculas.Server",
   "Mode": "Default",
@@ -7939,6 +7939,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\js\\Utilidades.js"
+    },
+    {
+      "Identity": "G:\\Trabajo\\GitProjects\\Real-Projects\\BlazorPeliculas\\Server\\wwwroot\\personas\\59be282d-2443-4b55-bba8-228c0a9efbdc.jpg",
+      "SourceId": "BlazorPeliculas.Server",
+      "SourceType": "Discovered",
+      "ContentRoot": "G:\\Trabajo\\GitProjects\\Real-Projects\\BlazorPeliculas\\Server\\wwwroot\\",
+      "BasePath": "_content/BlazorPeliculas.Server",
+      "RelativePath": "personas/59be282d-2443-4b55-bba8-228c0a9efbdc.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\personas\\59be282d-2443-4b55-bba8-228c0a9efbdc.jpg"
     }
   ]
 }

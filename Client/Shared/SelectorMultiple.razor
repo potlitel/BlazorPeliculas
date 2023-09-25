@@ -1,0 +1,18 @@
+﻿<div class="selector-multiple">
+    <ul class="selectable-ul">
+        @foreach (var item in NoSeleccionados)
+        {
+            <li @onclick="(() =>Seleccionar(item))">@item.Valor</li>
+        }
+    </ul>
+    <div class="selector-multiple-botones">
+        <button type="button" @onclick="SeleccionarTodo">>></button>
+        <button type="button" @onclick="DesSeleccionarTodo">@removerTodoText</button>
+    </div>
+    <ul class="selectable-ul">
+        @foreach (var item in Seleccionados)
+        {
+            <li @onclick="(() =>DesSeleccionar(item))">@item.Valor</li>
+        }
+    </ul>
+</div>

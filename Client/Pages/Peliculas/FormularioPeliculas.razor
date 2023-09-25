@@ -36,6 +36,13 @@
         <InputMarkdown @bind-Value="@Pelicula.Resumen" For=@(() => Pelicula.Resumen) Label="Biografía" />
     </div>
 
+    <div class="mb-3">
+        <label>Géneros</label>
+        <div>
+            <SelectorMultiple Seleccionados="Seleccionados" NoSeleccionados="NoSeleccionados"></SelectorMultiple>
+        </div>
+    </div>
+
     <button class="btn btn-success" type="submit">Guardar cambios</button>
 
 </EditForm>

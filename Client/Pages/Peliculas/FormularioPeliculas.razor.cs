@@ -1,3 +1,4 @@
+using BlazorPeliculas.Client.Helpers;
 using BlazorPeliculas.Shared.Entidades;
 using CurrieTechnologies.Razor.SweetAlert2;
 using Microsoft.AspNetCore.Components;
@@ -21,6 +22,19 @@ namespace BlazorPeliculas.Client.Pages.Peliculas
         [Parameter]
         public EventCallback OnValidSubmit { get; set; }
 
+        [Parameter]
+        public List<Genero> GenerosSeleccionados { get; set; } = new List<Genero>();
+
+        [EditorRequired]
+        [Parameter]
+        public List<Genero> GenerosNoSeleccionados { get; set; } = new List<Genero>();
+
+        private List<SelectorMultipleModel> Seleccionados { get; set; } =
+            new List<SelectorMultipleModel>();
+
+        private List<SelectorMultipleModel> NoSeleccionados { get; set; } =
+            new List<SelectorMultipleModel>();
+
         private EditContext editContext = null!;
 
         public bool FormularioPosteadoConExito { get; set; } = false;
@@ -33,6 +47,14 @@ namespace BlazorPeliculas.Client.Pages.Peliculas
                 imgUrl = Pelicula.Poster;
                 Pelicula.Poster = null;
             }
+
+            Seleccionados = GenerosSeleccionados
+                .Select(item => new SelectorMultipleModel(item.Id.ToString(), item.Nombre))
+                .ToList();
+
+            NoSeleccionados = GenerosNoSeleccionados
+                .Select(item => new SelectorMultipleModel(item.Id.ToString(), item.Nombre))
+                .ToList();
         }
 
         private void ImgSeleccionada(string imagenBase64)

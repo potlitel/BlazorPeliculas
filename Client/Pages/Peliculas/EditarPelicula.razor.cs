@@ -12,6 +12,9 @@ namespace BlazorPeliculas.Client.Pages.Peliculas
 
         private Pelicula? Pelicula;
 
+        private List<Genero> GenerosNoSeleccionados = new List<Genero>();
+        private List<Genero> GenerosSeleccionados = new List<Genero>();
+
         public EditarPelicula()
         { }
 
@@ -22,6 +25,17 @@ namespace BlazorPeliculas.Client.Pages.Peliculas
                 Id = PeliculaId,
                 //Nombre = "Alain Jorge Acuña",
                 //FechaNacimiento = DateTime.Today
+            };
+            GenerosNoSeleccionados = new List<Genero>()
+            {
+                new Genero() { Id = 1, Nombre = "Comedia" },
+                new Genero() { Id = 3, Nombre = "Acción" },
+                new Genero() { Id = 4, Nombre = "Sci-fi" },
+            };
+
+            GenerosSeleccionados = new List<Genero>()
+            {
+                new Genero() { Id = 2, Nombre = "Drama" }
             };
         }
 

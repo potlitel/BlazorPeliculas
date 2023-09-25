@@ -139,3 +139,7 @@ build_metadata.AdditionalFiles.CssScope = b-1y3jblalz7
 [G:/Trabajo/GitProjects/Real-Projects/BlazorPeliculas/Client/Shared/NavMenu.razor]
 build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXE5hdk1lbnUucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = b-bghibg8178
+
+[G:/Trabajo/GitProjects/Real-Projects/BlazorPeliculas/Client/Shared/SelectorMultiple.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXFNlbGVjdG9yTXVsdGlwbGUucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = b-qwux7sz5mc
