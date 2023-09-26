@@ -1,4 +1,5 @@
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace BlazorPeliculas.Shared.Entidades
 {
@@ -12,6 +13,9 @@ namespace BlazorPeliculas.Shared.Entidades
         public string? Biografia { get; set; }
         public string? Foto { get; set; }
         public DateTime FechaNacimiento { get; set; }
+
+        [NotMapped]
+        public string? Personaje { get; set; }
 
         public List<PeliculaActor> PeliculasActor { get; set; } = new List<PeliculaActor>();
 

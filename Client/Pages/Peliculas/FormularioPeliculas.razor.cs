@@ -121,5 +121,16 @@ namespace BlazorPeliculas.Client.Pages.Peliculas
                 },
             };
         }
+
+        private async Task OnDataAnnotationValidated()
+        {
+            Pelicula.GenerosPelicula = Seleccionados
+                .Select(x => new GeneroPelicula { GeneroId = int.Parse(x.Llave) })
+                .ToList();
+            Pelicula.PeliculasActor = ActoresSeleccionados
+                .Select(x => new PeliculaActor { ActorId = x.Id, Personaje = x.Personaje })
+                .ToList();
+            await OnValidSubmit.InvokeAsync();
+        }
     }
 }

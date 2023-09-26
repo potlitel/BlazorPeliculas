@@ -1,4 +1,5 @@
 using BlazorPeliculas.Shared.Entidades;
+using CurrieTechnologies.Razor.SweetAlert2;
 
 namespace BlazorPeliculas.Client.Pages.Peliculas
 {
@@ -24,10 +25,23 @@ namespace BlazorPeliculas.Client.Pages.Peliculas
             };
         }
 
-        public void Crear()
+        public async void Crear()
         {
-            Console.WriteLine(navigationManager.BaseUri);
-            navigationManager.NavigateTo("pelicula");
+            var responseHttp = await repositorio.Post<Pelicula, int>("/api/peliculas", Pelicula);
+            if (responseHttp.Error)
+            {
+                var mensajeError = await responseHttp.ObtenerMensajeError();
+                await swal.FireAsync("Error", mensajeError, SweetAlertIcon.Error);
+            }
+            else
+            {
+                var peliculaId = responseHttp.Response;
+                navigationManager.NavigateTo(
+                    $"/pelicula/{peliculaId}/{Pelicula.Titulo.Replace(" ", "-")}"
+                );
+            }
+            //Console.WriteLine(navigationManager.BaseUri);
+            //navigationManager.NavigateTo("pelicula");
         }
     }
 }
