@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "VTtFmDqwfinjULaOmogV5giER+5veWr2vq24pUCiXJ8=",
+  "Hash": "eS/82auVx1w4VlEcVvtiJ12nRBL9caxZyTaHC0GIiTk=",
   "Source": "BlazorPeliculas.Client",
   "BasePath": "/",
   "Mode": "Root",
@@ -16,6 +16,40 @@
     }
   ],
   "Assets": [
+    {
+      "Identity": "C:\\Users\\potlitel\\.nuget\\packages\\blazored.typeahead\\4.7.0\\staticwebassets\\blazored-typeahead.css",
+      "SourceId": "Blazored.Typeahead",
+      "SourceType": "Package",
+      "ContentRoot": "C:\\Users\\potlitel\\.nuget\\packages\\blazored.typeahead\\4.7.0\\staticwebassets\\",
+      "BasePath": "_content/Blazored.Typeahead",
+      "RelativePath": "blazored-typeahead.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "C:\\Users\\potlitel\\.nuget\\packages\\blazored.typeahead\\4.7.0\\staticwebassets\\blazored-typeahead.css"
+    },
+    {
+      "Identity": "C:\\Users\\potlitel\\.nuget\\packages\\blazored.typeahead\\4.7.0\\staticwebassets\\blazored-typeahead.js",
+      "SourceId": "Blazored.Typeahead",
+      "SourceType": "Package",
+      "ContentRoot": "C:\\Users\\potlitel\\.nuget\\packages\\blazored.typeahead\\4.7.0\\staticwebassets\\",
+      "BasePath": "_content/Blazored.Typeahead",
+      "RelativePath": "blazored-typeahead.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "C:\\Users\\potlitel\\.nuget\\packages\\blazored.typeahead\\4.7.0\\staticwebassets\\blazored-typeahead.js"
+    },
     {
       "Identity": "C:\\Users\\potlitel\\.nuget\\packages\\currietechnologies.razor.sweetalert2\\5.5.0\\staticwebassets\\bootstrap4Theme.css",
       "SourceId": "CurrieTechnologies.Razor.SweetAlert2",
@@ -627,6 +661,23 @@
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "C:\\Users\\potlitel\\.nuget\\packages\\microsoft.aspnetcore.components.webassembly\\7.0.9\\build\\net7.0\\blazor.webassembly.js"
+    },
+    {
+      "Identity": "G:\\Trabajo\\GitProjects\\Real-Projects\\BlazorPeliculas\\Client\\bin\\Debug\\net7.0\\wwwroot\\_framework\\Blazored.Typeahead.dll",
+      "SourceId": "BlazorPeliculas.Client",
+      "SourceType": "Computed",
+      "ContentRoot": "G:\\Trabajo\\GitProjects\\Real-Projects\\BlazorPeliculas\\Client\\bin\\Debug\\net7.0\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "_framework/Blazored.Typeahead.dll",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "BlazorWebAssemblyResource",
+      "AssetTraitValue": "runtime",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "C:\\Users\\potlitel\\.nuget\\packages\\blazored.typeahead\\4.7.0\\lib\\net6.0\\Blazored.Typeahead.dll"
     },
     {
       "Identity": "G:\\Trabajo\\GitProjects\\Real-Projects\\BlazorPeliculas\\Client\\bin\\Debug\\net7.0\\wwwroot\\_framework\\BlazorPeliculas.Client.dll",
@@ -6594,6 +6645,23 @@
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
       "OriginalItemSpec": "G:\\Trabajo\\GitProjects\\Real-Projects\\BlazorPeliculas\\Client\\bin\\Debug\\net7.0\\wwwroot\\_framework\\System.Xml.Linq.dll"
+    },
+    {
+      "Identity": "G:\\Trabajo\\GitProjects\\Real-Projects\\BlazorPeliculas\\Client\\obj\\Debug\\net7.0\\build-gz\\QZu3WveO.gz",
+      "SourceId": "BlazorPeliculas.Client",
+      "SourceType": "Computed",
+      "ContentRoot": "G:\\Trabajo\\GitProjects\\Real-Projects\\BlazorPeliculas\\Client\\bin\\Debug\\net7.0\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "_framework/Blazored.Typeahead.dll.gz",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "RelatedAsset": "G:\\Trabajo\\GitProjects\\Real-Projects\\BlazorPeliculas\\Client\\bin\\Debug\\net7.0\\wwwroot\\_framework\\Blazored.Typeahead.dll",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "G:\\Trabajo\\GitProjects\\Real-Projects\\BlazorPeliculas\\Client\\bin\\Debug\\net7.0\\wwwroot\\_framework\\Blazored.Typeahead.dll"
     },
     {
       "Identity": "G:\\Trabajo\\GitProjects\\Real-Projects\\BlazorPeliculas\\Client\\obj\\Debug\\net7.0\\build-gz\\r+qKy8eT.gz",

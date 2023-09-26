@@ -1,11 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "D6MIWUxSxOJdDJ9lDoi+kos7I+iOf4vEzzE/cKaMkC/hfG3Rf71VStYOWbZvA9oHPpecdyDFNodl+e3jklHgbw==",
+  "dgSpecHash": "rOhfz3JYtl2nFG3LcqwG8fZzgPMAlidrmHZ5kA6yQ/p9UaDNJdcFbs/4xubXiDvS2sKaDYwLmGmmB5T0NpePYw==",
   "success": true,
   "projectFilePath": "G:\\Trabajo\\GitProjects\\Real-Projects\\BlazorPeliculas\\Server\\BlazorPeliculas.Server.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\potlitel\\.nuget\\packages\\azure.core\\1.25.0\\azure.core.1.25.0.nupkg.sha512",
     "C:\\Users\\potlitel\\.nuget\\packages\\azure.identity\\1.7.0\\azure.identity.1.7.0.nupkg.sha512",
+    "C:\\Users\\potlitel\\.nuget\\packages\\blazored.typeahead\\4.7.0\\blazored.typeahead.4.7.0.nupkg.sha512",
     "C:\\Users\\potlitel\\.nuget\\packages\\currietechnologies.razor.sweetalert2\\5.5.0\\currietechnologies.razor.sweetalert2.5.5.0.nupkg.sha512",
     "C:\\Users\\potlitel\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
     "C:\\Users\\potlitel\\.nuget\\packages\\markdig\\0.33.0\\markdig.0.33.0.nupkg.sha512",

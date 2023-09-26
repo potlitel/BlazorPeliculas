@@ -43,6 +43,22 @@
         </div>
     </div>
 
+    <div class="mb-3">
+        <label>Actores</label>
+        <div>
+            <SelectorMultipleTypeahead1 Context="Actor" SearchMethod="BuscarActores"
+                                        ElementosSeleccionados="ActoresSeleccionados">
+                <MyListTemplate>
+                    @Actor.Nombre
+                </MyListTemplate>
+                <MyResultTemplate>
+                    <img style="width: 50px" src="@Actor.Foto" />
+                    @Actor.Nombre
+                </MyResultTemplate>
+            </SelectorMultipleTypeahead1>
+        </div>
+    </div>
+
     <button class="btn btn-success" type="submit">Guardar cambios</button>
 
 </EditForm>
