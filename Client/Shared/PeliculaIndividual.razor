@@ -37,7 +37,7 @@
 
     protected override void OnInitialized()
     {
-        urlPelicula = $"pelicula/";
+        urlPelicula = $"pelicula/{pelicula.Id}/{pelicula.Titulo.Replace(" ", "-")}";
     }
 
     void Eliminar()

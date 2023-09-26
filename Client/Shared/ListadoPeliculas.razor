@@ -16,7 +16,7 @@
 </div> *@
 
 <div>
-    <h3>Películas Listado</h3>
+    @* <h3>Películas Listado</h3> *@
     @* @if (pelis is null)
     {
     @if (Cargando is not null)
@@ -70,22 +70,22 @@
 
     protected override void OnInitialized()
     {
-        Console.WriteLine($"OnInitialized - Cantidad de pelis {pelis.Count}");
+        // Console.WriteLine($"OnInitialized - Cantidad de pelis {pelis.Count}");
     }
 
     protected override void OnParametersSet()
     {
-        Console.WriteLine($"OnParametersSet - Cantidad de pelis {pelis.Count}");
+        // Console.WriteLine($"OnParametersSet - Cantidad de pelis {pelis.Count}");
     }
 
     protected override void OnAfterRender(bool primeraRenderizacion)
     {
-        Console.WriteLine("OnAfterRender: Primera vez: " + primeraRenderizacion);
+        // Console.WriteLine("OnAfterRender: Primera vez: " + primeraRenderizacion);
     }
 
     protected override bool ShouldRender()
     {
-        Console.WriteLine("ShouldRender");
+        // Console.WriteLine("ShouldRender");
         return true;
     }
 

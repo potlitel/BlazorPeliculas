@@ -103,23 +103,25 @@ namespace BlazorPeliculas.Client.Pages.Peliculas
 
         private async Task<IEnumerable<Actor>> BuscarActores(string searchText)
         {
-            return new List<Actor>()
-            {
-                new Actor
-                {
-                    Id = 1,
-                    Nombre = "Tom Holland",
-                    Foto =
-                        "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Tom_Holland_by_Gage_Skidmore.jpg/220px-Tom_Holland_by_Gage_Skidmore.jpg"
-                },
-                new Actor
-                {
-                    Id = 2,
-                    Nombre = "Tom Hanks",
-                    Foto =
-                        "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Tom_Hanks_TIFF_2019.jpg/220px-Tom_Hanks_TIFF_2019.jpg"
-                },
-            };
+            var respuestaHttp = await repo.Get<List<Actor>>($"api/actores/buscar/{searchText}");
+            return respuestaHttp.Response!;
+            //return new List<Actor>()
+            //{
+            //    new Actor
+            //    {
+            //        Id = 1,
+            //        Nombre = "Tom Holland",
+            //        Foto =
+            //            "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Tom_Holland_by_Gage_Skidmore.jpg/220px-Tom_Holland_by_Gage_Skidmore.jpg"
+            //    },
+            //    new Actor
+            //    {
+            //        Id = 2,
+            //        Nombre = "Tom Hanks",
+            //        Foto =
+            //            "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Tom_Hanks_TIFF_2019.jpg/220px-Tom_Hanks_TIFF_2019.jpg"
+            //    },
+            //};
         }
 
         private async Task OnDataAnnotationValidated()

@@ -3,16 +3,25 @@
 
 <PageTitle>Blazor películas</PageTitle>
 
-<ListadoPeliculas @ref="listadoPeliculas" pelis="pelis">
-    @*     <Cargando>
-    Cargando datos relacionados con las pelis
-    </Cargando>
-    <NoHayPelis>
-    No HAY!
-    </NoHayPelis> *@
-</ListadoPeliculas>
+<div>
+    <h3>En Cartelera</h3>
+    <ListadoPeliculas @ref="listadoPeliculas" pelis="EnCartelera">
+        @*     <Cargando>
+        Cargando datos relacionados con las pelis
+        </Cargando>
+        <NoHayPelis>
+        No HAY!
+        </NoHayPelis> *@
+    </ListadoPeliculas>
+</div>
 
-<button @onclick="LimpiarPeliculas">Limpiar películas</button>
+<div>
+    <h3>Próximos Estrenos</h3>
+    <ListadoPeliculas pelis="FuturosEstrenos">
+    </ListadoPeliculas>
+</div>
+
+@* <button @onclick="LimpiarPeliculas">Limpiar películas</button> *@
 
 @* <BindAfterDemo /> *@
 
@@ -22,17 +31,24 @@
 
 </div> *@
 
-<button @onclick="AgregarPeli">Agregar peli</button>
+@* <button @onclick="AgregarPeli">Agregar peli</button> *@
 
 @code {
     public List<Pelicula> pelis { get; set; } = null!;
 
+    public List<Pelicula>? FuturosEstrenos { get; set; }
+    public List<Pelicula>? EnCartelera { get; set; }
+
     public ListadoPeliculas? listadoPeliculas;
 
-    protected override void OnInitialized()
+    protected override async Task OnInitializedAsync()
     {
-        Console.WriteLine("OnInitialized");
-        pelis = repo.ObtenerPeliculas();
+        // Console.WriteLine("OnInitialized");
+        // pelis = repo.ObtenerPeliculas();
+
+        var respuestaHttp = await repo.Get<HomePageDTO>("api/peliculas/");
+        FuturosEstrenos = respuestaHttp.Response!.ProximosEstrenos;
+        EnCartelera = respuestaHttp.Response!.PeliculasEnCartelera;
     }
 
     List<Pelicula> ObtenerPeliculas()

@@ -28,6 +28,20 @@ namespace BlazorPeliculas.Server.Controllers
             return await context.Actores.ToListAsync();
         }
 
+        [HttpGet("buscar/{textoBusqueda}")]
+        public async Task<ActionResult<List<Actor>>> Get(string textoBusqueda)
+        {
+            if (string.IsNullOrWhiteSpace(textoBusqueda))
+            {
+                return new List<Actor>();
+            }
+            textoBusqueda = textoBusqueda.ToLower();
+            return await context.Actores
+                .Where(item => item.Nombre.ToLower().Contains(textoBusqueda))
+                .Take(5)
+                .ToListAsync();
+        }
+
         [HttpPost]
         public async Task<ActionResult<int>> Post(Actor actor)
         {
