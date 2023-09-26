@@ -2,32 +2,41 @@
 
 @if (listado is null)
 {
-    @if (Cargando is not null)
+    @if (Cargando is null)
     {
-        @Cargando
+        <img alt="alt" src="https://miro.medium.com/v2/resize:fit:1400/1*Gvgic29bgoiGVLmI6AVbUg.gif">
     }
     else
     {
-        <img alt="alt" src="https://i.pinimg.com/originals/3d/6a/a9/3d6aa9082f3c9e285df9970dc7b762ac.gif">
+        @Cargando
     }
 }
 else if (listado.Count == 0)
 {
-    @if (NoHayPelis is not null)
+    @if (NoHayRegistros is null)
     {
-        @NoHayPelis
+        <p>No hay películas para mostrar</p>
     }
     else
     {
-        <p>No hay películas para mostrar</p>
+        @NoHayRegistros
     }
 }
 else
 {
-    @foreach (var elemento in listado)
+    if (HayRegistros is not null)
     {
-        @HayPelis(elemento);
+        @foreach (var elemento in listado)
+        {
+            @HayRegistros(elemento)
+            ;
+        }
     }
+    else
+    {
+        @HayRegistrosCompleto
+    }
+
 }
 
 @code {
@@ -35,11 +44,14 @@ else
     public RenderFragment Cargando { get; set; } = null!;
 
     [Parameter]
-    public RenderFragment NoHayPelis { get; set; } = null!;
+    public RenderFragment NoHayRegistros { get; set; } = null!;
 
     [Parameter]
-    public RenderFragment<Titem> HayPelis { get; set; } = null!;
+    public RenderFragment<Titem> HayRegistros { get; set; } = null!;
 
     [Parameter]
+    public RenderFragment HayRegistrosCompleto { get; set; } = null!;
+
+    [Parameter, EditorRequired]
     public List<Titem> listado { get; set; } = null!;
 }

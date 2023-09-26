@@ -1,8 +1,35 @@
 ﻿@page "/actores"
+@inject IRepositorio repo
 
-<div>
-    <h3>Listado actores</h3>
-    <div class="mb-3">
-        <a href="actores/crear" class="btn btn-info">Agregar Actor</a>
-    </div>
+<h3>Listado actores</h3>
+<div class="mb-3">
+    <a href="actores/crear" class="btn btn-info">Agregar Actor</a>
 </div>
+
+<ListadoGenerico listado="Actores">
+    <HayRegistrosCompleto>
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th></th>
+                    <th>Nombre</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Actores!)
+                {
+                    <tr>
+                        <td>
+                            <a class="btn btn-success">Editar</a>
+                            <button class="btn btn-danger">Borrar</button>
+                        </td>
+                        <td>
+                            @item.Nombre
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </HayRegistrosCompleto>
+</ListadoGenerico>
+

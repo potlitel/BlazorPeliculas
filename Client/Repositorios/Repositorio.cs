@@ -16,6 +16,23 @@ namespace BlazorPeliculas.Client.Repositorios
         private JsonSerializerOptions OpcionesPorDefectoJSON =>
             new JsonSerializerOptions { PropertyNameCaseInsensitive = true };
 
+        public async Task<HttpResponseWrapper<T>> Get<T>(string url)
+        {
+            var respuestaHttp = await httpClient.GetAsync(url);
+            if (respuestaHttp.IsSuccessStatusCode)
+            {
+                var respuesta = await DeserealizarRespuesta<T>(
+                    respuestaHttp,
+                    OpcionesPorDefectoJSON
+                );
+                return new HttpResponseWrapper<T>(respuesta, error: false, respuestaHttp);
+            }
+            else
+            {
+                return new HttpResponseWrapper<T>(default, error: true, respuestaHttp);
+            }
+        }
+
         public async Task<HttpResponseWrapper<object>> Post<T>(string url, T enviar)
         {
             var enviarJson = JsonSerializer.Serialize(enviar);

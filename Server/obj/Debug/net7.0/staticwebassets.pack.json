@@ -1,8 +1,20 @@
 {
   "Files": [
     {
+      "Id": "G:\\Trabajo\\GitProjects\\Real-Projects\\BlazorPeliculas\\Server\\wwwroot\\peliculas\\cb03b103-098b-4229-a915-603fdde04539.jpg",
+      "PackagePath": "staticwebassets\\peliculas\\cb03b103-098b-4229-a915-603fdde04539.jpg"
+    },
+    {
+      "Id": "G:\\Trabajo\\GitProjects\\Real-Projects\\BlazorPeliculas\\Server\\wwwroot\\peliculas\\e93ed04c-2ca9-4cd1-b679-be11790658d8.jpg",
+      "PackagePath": "staticwebassets\\peliculas\\e93ed04c-2ca9-4cd1-b679-be11790658d8.jpg"
+    },
+    {
       "Id": "G:\\Trabajo\\GitProjects\\Real-Projects\\BlazorPeliculas\\Server\\wwwroot\\personas\\59be282d-2443-4b55-bba8-228c0a9efbdc.jpg",
       "PackagePath": "staticwebassets\\personas\\59be282d-2443-4b55-bba8-228c0a9efbdc.jpg"
+    },
+    {
+      "Id": "G:\\Trabajo\\GitProjects\\Real-Projects\\BlazorPeliculas\\Server\\wwwroot\\personas\\b856fb22-d772-4fac-839d-9af9aa3f98f5.jpg",
+      "PackagePath": "staticwebassets\\personas\\b856fb22-d772-4fac-839d-9af9aa3f98f5.jpg"
     },
     {
       "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.BlazorPeliculas.Server.Microsoft.AspNetCore.StaticWebAssets.props",

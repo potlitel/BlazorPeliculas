@@ -1,11 +1,12 @@
 using BlazorPeliculas.Shared.Entidades;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using RouteAttribute = Microsoft.AspNetCore.Components.RouteAttribute;
 
 namespace BlazorPeliculas.Server.Controllers
 {
-    [Route("api/generos")]
     [ApiController]
+    [Route("api/generos")]
     public class GenerosController : ControllerBase
     {
         private readonly ApplicationDBContext context;
@@ -13,6 +14,12 @@ namespace BlazorPeliculas.Server.Controllers
         public GenerosController(ApplicationDBContext context)
         {
             this.context = context;
+        }
+
+        [HttpGet("api/generos")]
+        public async Task<ActionResult<IEnumerable<Genero>>> Get()
+        {
+            return await context.Generos.ToListAsync();
         }
 
         [HttpPost("api/generos")]

@@ -1,8 +1,34 @@
 ﻿@page "/generos"
+@inject IRepositorio repo
 
-<div>
-    <h3>Listado géneros</h3>
-    <div class="mb-3">
-        <a href="generos/crear" class="btn btn-info">Agregar Género</a>
-    </div>
+<h3>Listado géneros</h3>
+<div class="mb-3">
+    <a href="generos/crear" class="btn btn-info">Agregar Género</a>
 </div>
+
+<ListadoGenerico listado="Generos">
+    <HayRegistrosCompleto>
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th></th>
+                    <th>Nombre</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Generos!)
+                {
+                    <tr>
+                        <td>
+                            <a class="btn btn-success">Editar</a>
+                            <button class="btn btn-danger">Borrar</button>
+                        </td>
+                        <td>
+                            @item.Nombre
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </HayRegistrosCompleto>
+</ListadoGenerico>

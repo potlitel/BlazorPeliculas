@@ -1,11 +1,3 @@
-G:\Trabajo\GitProjects\Real-Projects\BlazorPeliculas\Server\obj\Debug\net7.0\BlazorPeliculas.Server.csproj.AssemblyReference.cache
-G:\Trabajo\GitProjects\Real-Projects\BlazorPeliculas\Server\obj\Debug\net7.0\BlazorPeliculas.Server.GeneratedMSBuildEditorConfig.editorconfig
-G:\Trabajo\GitProjects\Real-Projects\BlazorPeliculas\Server\obj\Debug\net7.0\BlazorPeliculas.Server.AssemblyInfoInputs.cache
-G:\Trabajo\GitProjects\Real-Projects\BlazorPeliculas\Server\obj\Debug\net7.0\BlazorPeliculas.Server.AssemblyInfo.cs
-G:\Trabajo\GitProjects\Real-Projects\BlazorPeliculas\Server\obj\Debug\net7.0\BlazorPeliculas.Server.csproj.CoreCompileInputs.cache
-G:\Trabajo\GitProjects\Real-Projects\BlazorPeliculas\Server\obj\Debug\net7.0\BlazorPeliculas.Server.MvcApplicationPartsAssemblyInfo.cache
-G:\Trabajo\GitProjects\Real-Projects\BlazorPeliculas\Server\obj\Debug\net7.0\BlazorPeliculas.Server.RazorAssemblyInfo.cache
-G:\Trabajo\GitProjects\Real-Projects\BlazorPeliculas\Server\obj\Debug\net7.0\BlazorPeliculas.Server.RazorAssemblyInfo.cs
 G:\Trabajo\GitProjects\Real-Projects\BlazorPeliculas\Server\bin\Debug\net7.0\BlazorPeliculas.Client.staticwebassets.runtime.json
 G:\Trabajo\GitProjects\Real-Projects\BlazorPeliculas\Server\bin\Debug\net7.0\appsettings.Development.json
 G:\Trabajo\GitProjects\Real-Projects\BlazorPeliculas\Server\bin\Debug\net7.0\appsettings.json
@@ -86,6 +78,14 @@ G:\Trabajo\GitProjects\Real-Projects\BlazorPeliculas\Server\bin\Debug\net7.0\Bla
 G:\Trabajo\GitProjects\Real-Projects\BlazorPeliculas\Server\bin\Debug\net7.0\BlazorPeliculas.Shared.dll
 G:\Trabajo\GitProjects\Real-Projects\BlazorPeliculas\Server\bin\Debug\net7.0\BlazorPeliculas.Client.pdb
 G:\Trabajo\GitProjects\Real-Projects\BlazorPeliculas\Server\bin\Debug\net7.0\BlazorPeliculas.Shared.pdb
+G:\Trabajo\GitProjects\Real-Projects\BlazorPeliculas\Server\obj\Debug\net7.0\BlazorPeliculas.Server.csproj.AssemblyReference.cache
+G:\Trabajo\GitProjects\Real-Projects\BlazorPeliculas\Server\obj\Debug\net7.0\BlazorPeliculas.Server.GeneratedMSBuildEditorConfig.editorconfig
+G:\Trabajo\GitProjects\Real-Projects\BlazorPeliculas\Server\obj\Debug\net7.0\BlazorPeliculas.Server.AssemblyInfoInputs.cache
+G:\Trabajo\GitProjects\Real-Projects\BlazorPeliculas\Server\obj\Debug\net7.0\BlazorPeliculas.Server.AssemblyInfo.cs
+G:\Trabajo\GitProjects\Real-Projects\BlazorPeliculas\Server\obj\Debug\net7.0\BlazorPeliculas.Server.csproj.CoreCompileInputs.cache
+G:\Trabajo\GitProjects\Real-Projects\BlazorPeliculas\Server\obj\Debug\net7.0\BlazorPeliculas.Server.MvcApplicationPartsAssemblyInfo.cache
+G:\Trabajo\GitProjects\Real-Projects\BlazorPeliculas\Server\obj\Debug\net7.0\BlazorPeliculas.Server.RazorAssemblyInfo.cache
+G:\Trabajo\GitProjects\Real-Projects\BlazorPeliculas\Server\obj\Debug\net7.0\BlazorPeliculas.Server.RazorAssemblyInfo.cs
 G:\Trabajo\GitProjects\Real-Projects\BlazorPeliculas\Server\obj\Debug\net7.0\staticwebassets\msbuild.BlazorPeliculas.Server.Microsoft.AspNetCore.StaticWebAssets.props
 G:\Trabajo\GitProjects\Real-Projects\BlazorPeliculas\Server\obj\Debug\net7.0\staticwebassets\msbuild.build.BlazorPeliculas.Server.props
 G:\Trabajo\GitProjects\Real-Projects\BlazorPeliculas\Server\obj\Debug\net7.0\staticwebassets\msbuild.buildMultiTargeting.BlazorPeliculas.Server.props

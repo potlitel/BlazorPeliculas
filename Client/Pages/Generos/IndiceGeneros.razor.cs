@@ -1,18 +1,15 @@
-﻿using Microsoft.AspNetCore.Components;
-using Microsoft.AspNetCore.Components.Rendering;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-
+using BlazorPeliculas.Shared.Entidades;
 
 namespace BlazorPeliculas.Client.Pages.Generos
 {
     public partial class IndiceGeneros
     {
-        public IndiceGeneros()
-        {
+        public List<Genero>? Generos { get; set; }
 
+        protected override async Task OnInitializedAsync()
+        {
+            var respuestaHttp = await repo.Get<List<Genero>>("api/generos");
+            Generos = respuestaHttp.Response!;
         }
     }
 }

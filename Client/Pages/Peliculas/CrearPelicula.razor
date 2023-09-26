@@ -6,5 +6,12 @@
 <div>
     <h3>Crea Película</h3>
 
-    <FormularioPeliculas @ref="formPelicula" GenerosNoSeleccionados="GenerosNoSeleccionados" Pelicula="Pelicula" OnValidSubmit="Crear" />
+    @if (MostrarFormulario)
+    {
+        <FormularioPeliculas @ref="formPelicula" GenerosNoSeleccionados="GenerosNoSeleccionados" Pelicula="Pelicula" OnValidSubmit="Crear" />
+    }
+    else
+    {
+        <p>Cargando...</p>
+    }
 </div>

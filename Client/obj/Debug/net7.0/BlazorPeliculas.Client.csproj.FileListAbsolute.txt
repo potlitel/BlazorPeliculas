@@ -1,9 +1,3 @@
-G:\Trabajo\GitProjects\Real-Projects\BlazorPeliculas\Client\obj\Debug\net7.0\BlazorPeliculas.Client.csproj.AssemblyReference.cache
-G:\Trabajo\GitProjects\Real-Projects\BlazorPeliculas\Client\obj\Debug\net7.0\BlazorPeliculas.Client.GeneratedMSBuildEditorConfig.editorconfig
-G:\Trabajo\GitProjects\Real-Projects\BlazorPeliculas\Client\obj\Debug\net7.0\BlazorPeliculas.Client.AssemblyInfoInputs.cache
-G:\Trabajo\GitProjects\Real-Projects\BlazorPeliculas\Client\obj\Debug\net7.0\BlazorPeliculas.Client.AssemblyInfo.cs
-G:\Trabajo\GitProjects\Real-Projects\BlazorPeliculas\Client\obj\Debug\net7.0\BlazorPeliculas.Client.csproj.CoreCompileInputs.cache
-G:\Trabajo\GitProjects\Real-Projects\BlazorPeliculas\Client\obj\Debug\net7.0\BlazorPeliculas.Client.MvcApplicationPartsAssemblyInfo.cache
 G:\Trabajo\GitProjects\Real-Projects\BlazorPeliculas\Client\bin\Debug\net7.0\wwwroot\_framework\blazor.boot.json
 G:\Trabajo\GitProjects\Real-Projects\BlazorPeliculas\Client\bin\Debug\net7.0\wwwroot\_framework\blazor.webassembly.js
 G:\Trabajo\GitProjects\Real-Projects\BlazorPeliculas\Client\bin\Debug\net7.0\wwwroot\_framework\Blazored.Typeahead.dll
@@ -626,6 +620,12 @@ G:\Trabajo\GitProjects\Real-Projects\BlazorPeliculas\Client\bin\Debug\net7.0\icu
 G:\Trabajo\GitProjects\Real-Projects\BlazorPeliculas\Client\bin\Debug\net7.0\icudt_no_CJK.dat
 G:\Trabajo\GitProjects\Real-Projects\BlazorPeliculas\Client\bin\Debug\net7.0\BlazorPeliculas.Shared.dll
 G:\Trabajo\GitProjects\Real-Projects\BlazorPeliculas\Client\bin\Debug\net7.0\BlazorPeliculas.Shared.pdb
+G:\Trabajo\GitProjects\Real-Projects\BlazorPeliculas\Client\obj\Debug\net7.0\BlazorPeliculas.Client.csproj.AssemblyReference.cache
+G:\Trabajo\GitProjects\Real-Projects\BlazorPeliculas\Client\obj\Debug\net7.0\BlazorPeliculas.Client.GeneratedMSBuildEditorConfig.editorconfig
+G:\Trabajo\GitProjects\Real-Projects\BlazorPeliculas\Client\obj\Debug\net7.0\BlazorPeliculas.Client.AssemblyInfoInputs.cache
+G:\Trabajo\GitProjects\Real-Projects\BlazorPeliculas\Client\obj\Debug\net7.0\BlazorPeliculas.Client.AssemblyInfo.cs
+G:\Trabajo\GitProjects\Real-Projects\BlazorPeliculas\Client\obj\Debug\net7.0\BlazorPeliculas.Client.csproj.CoreCompileInputs.cache
+G:\Trabajo\GitProjects\Real-Projects\BlazorPeliculas\Client\obj\Debug\net7.0\BlazorPeliculas.Client.MvcApplicationPartsAssemblyInfo.cache
 G:\Trabajo\GitProjects\Real-Projects\BlazorPeliculas\Client\obj\Debug\net7.0\build-gz\QZu3WveO.gz
 G:\Trabajo\GitProjects\Real-Projects\BlazorPeliculas\Client\obj\Debug\net7.0\build-gz\S79iLcQr.gz
 G:\Trabajo\GitProjects\Real-Projects\BlazorPeliculas\Client\obj\Debug\net7.0\build-gz\dG1sW0nC.gz

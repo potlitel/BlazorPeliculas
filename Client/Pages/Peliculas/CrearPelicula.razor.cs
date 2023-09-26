@@ -14,15 +14,13 @@ namespace BlazorPeliculas.Client.Pages.Peliculas
 
         private FormularioPeliculas? formPelicula;
 
-        protected override void OnInitialized()
+        public bool MostrarFormulario { get; set; } = false;
+
+        protected override async Task OnInitializedAsync()
         {
-            GenerosNoSeleccionados = new List<Genero>()
-            {
-                new Genero() { Id = 1, Nombre = "Comedia" },
-                new Genero() { Id = 2, Nombre = "Drama" },
-                new Genero() { Id = 3, Nombre = "Acción" },
-                new Genero() { Id = 4, Nombre = "Sci-fi" },
-            };
+            var respuestaHttp = await repositorio.Get<List<Genero>>("api/generos");
+            GenerosNoSeleccionados = respuestaHttp.Response!;
+            MostrarFormulario = true;
         }
 
         public async void Crear()

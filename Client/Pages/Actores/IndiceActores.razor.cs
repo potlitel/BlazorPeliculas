@@ -1,18 +1,15 @@
-﻿using Microsoft.AspNetCore.Components;
-using Microsoft.AspNetCore.Components.Rendering;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-
+using BlazorPeliculas.Shared.Entidades;
 
 namespace BlazorPeliculas.Client.Pages.Actores
 {
     public partial class IndiceActores
     {
-        public IndiceActores()
-        {
+        public List<Actor>? Actores { get; set; }
 
+        protected override async Task OnInitializedAsync()
+        {
+            var respuestaHttp = await repo.Get<List<Actor>>("api/actores");
+            Actores = respuestaHttp.Response!;
         }
     }
 }
