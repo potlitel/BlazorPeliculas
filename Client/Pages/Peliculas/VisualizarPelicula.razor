@@ -1,10 +1,64 @@
 ﻿@page "/pelicula/{PeliculaId:int}"
 @page "/pelicula/{PeliculaId:int}/{NombrePelicula}"
+@inject IRepositorio repo
+@inject SweetAlertService swal
 
 
 <div>
     <div>
         <h3>Visualizar Película</h3>
 
+        @if (modelo is null)
+        {
+            <p>Cargando...</p>
+        }
+        else
+        {
+            <h2>
+                @modelo.Pelicula.Titulo (@modelo.Pelicula.FechaLanzamiento.ToString("yyyy"))
+            </h2>
+
+            @foreach (var item in modelo.Generos)
+            {
+                <a class="me-2 badge bg-primary rounded-pill text-decoration-none" href="peliculas/buscar?generoid=@item.Id">@item.Nombre</a>
+            }
+
+            <span>
+                | @modelo.Pelicula.FechaLanzamiento.ToString("dd MMM yyyy")
+                | Promedio: @modelo.PromedioVotos.ToString("0.#") /5
+                | Tu voyo: @modelo.VotoUsuario.ToString()
+            </span>
+
+            <div class="d-flex mt-2">
+                <span style="display:inline-block;" class="me-2">
+                    <img scr="@modelo.Pelicula.Poster" style="width: 225px; height:315px" />
+                </span>
+
+
+            </div>
+
+            <div class="mt-2">
+                <h3>Resumen:</h3>
+                <div>
+                    <MostrarMarkdown ContenidoMarkdown="@modelo.Pelicula.Resumen"></MostrarMarkdown>
+                </div>
+            </div>
+
+            <div class="mt-2">
+                <h3>Actores:</h3>
+                <div class="d-flex flex-column">
+                    @foreach (var actor in modelo.Actores)
+                    {
+                        <div class="mb-2">
+                            <img scr="@actor.Foto" style="width: 50px;" />
+                            <span style="display:inline-block; width:200px">@actor.Nombre</span>
+                            <span style="display:inline-block; width:45px">...</span>
+                            <span>@actor.Personaje</span>
+                        </div>
+                    }
+                </div>
+            </div>
+
+        }
     </div>
 </div>

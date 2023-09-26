@@ -1,12 +1,17 @@
 using BlazorPeliculas.Server;
 using BlazorPeliculas.Server.Helpers;
 using Microsoft.EntityFrameworkCore;
+using System.Text.Json.Serialization;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 
-builder.Services.AddControllersWithViews();
+builder.Services
+    .AddControllersWithViews()
+    .AddJsonOptions(
+        opts => opts.JsonSerializerOptions.ReferenceHandler = ReferenceHandler.IgnoreCycles
+    );
 builder.Services.AddRazorPages();
 
 builder.Services.AddDbContext<ApplicationDBContext>(

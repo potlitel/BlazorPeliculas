@@ -51,6 +51,49 @@ namespace BlazorPeliculas.Server.Controllers
             return result;
         }
 
+        [HttpGet("{id:int}")]
+        public async Task<ActionResult<PeliculaVisualizarDTO>> Get(int id)
+        {
+            var pelicula = await context.Peliculas
+                .Where(peli => peli.Id == id)
+                .Include(p => p.GenerosPelicula)
+                .ThenInclude(pg => pg.Genero)
+                .Include(p => p.PeliculasActor.OrderBy(pa => pa.Orden))
+                .ThenInclude(pa => pa.Actor)
+                .FirstOrDefaultAsync();
+
+            if (pelicula is null)
+            {
+                return NotFound();
+            }
+
+            //TODO: sistema de votación
+            var promedioVoto = 4;
+            var votoUsuario = 5;
+
+            var modelo = new PeliculaVisualizarDTO()
+            {
+                Pelicula = pelicula,
+                Generos = pelicula.GenerosPelicula.Select(gp => gp.Genero!).ToList(),
+                Actores = pelicula.PeliculasActor
+                    .Select(
+                        pa =>
+                            new Actor
+                            {
+                                Id = pa.ActorId,
+                                Nombre = pa.Actor!.Nombre,
+                                Foto = pa.Actor.Foto,
+                                Personaje = pa.Personaje
+                            }
+                    )
+                    .ToList(),
+                PromedioVotos = promedioVoto,
+                VotoUsuario = votoUsuario
+            };
+
+            return modelo;
+        }
+
         [HttpPost]
         public async Task<ActionResult<int>> Post(Pelicula peli)
         {
@@ -63,6 +106,15 @@ namespace BlazorPeliculas.Server.Controllers
                     contenedor
                 );
             }
+
+            if (peli.PeliculasActor is not null)
+            {
+                for (int i = 0; i < peli.PeliculasActor.Count; i++)
+                {
+                    peli.PeliculasActor[i].Orden = i + 1;
+                }
+            }
+
             context.Add(peli);
             await context.SaveChangesAsync();
             return peli.Id;
