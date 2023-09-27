@@ -31,7 +31,8 @@
 
             <div class="d-flex mt-2">
                 <span style="display:inline-block;" class="me-2">
-                    <img scr="@modelo.Pelicula.Poster" style="width: 225px; height:315px" />
+                    @* <img scr="@modelo.Pelicula.Poster" alt="Poster" style="width: 225px; height:315px" /> *@
+                    <img alt="alt" src="@modelo.Pelicula.Poster" class="rounded-3" style="width: 225px; height:315px">
                 </span>
 
 
@@ -50,7 +51,8 @@
                     @foreach (var actor in modelo.Actores)
                     {
                         <div class="mb-2">
-                            <img scr="@actor.Foto" style="width: 50px;" />
+                            @* <img scr="https://avatars.githubusercontent.com/u/9141961" alt="Alt" style="width: 50px;" /> *@
+                            <img alt="alt" src="@actor.Foto" style="width: 50px;" class="rounded-3">
                             <span style="display:inline-block; width:200px">@actor.Nombre</span>
                             <span style="display:inline-block; width:45px">...</span>
                             <span>@actor.Personaje</span>

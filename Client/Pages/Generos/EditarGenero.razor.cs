@@ -1,4 +1,5 @@
 using BlazorPeliculas.Shared.Entidades;
+using CurrieTechnologies.Razor.SweetAlert2;
 using Microsoft.AspNetCore.Components;
 
 namespace BlazorPeliculas.Client.Pages.Generos
@@ -8,24 +9,56 @@ namespace BlazorPeliculas.Client.Pages.Generos
         [Parameter]
         public int GeneroId { get; set; }
 
-        public EditarGenero() { }
+        public EditarGenero()
+        { }
 
         private FormularioGenero? formGenero;
 
         private Genero? Genero;
 
-        protected override void OnInitialized()
+        protected override async Task OnInitializedAsync()
         {
-            Genero = new Genero() { Id = GeneroId, Nombre = "Comedia" };
+            //Genero = new Genero() { Id = GeneroId, Nombre = "Comedia" };
+            var respuestaHttp = await repo.Get<Genero>($"api/generos/{GeneroId}");
+            if (respuestaHttp.Error)
+            {
+                if (
+                    respuestaHttp.HttpResponseMessage.StatusCode
+                    == System.Net.HttpStatusCode.NotFound
+                )
+                {
+                    navigationManager.NavigateTo("generos");
+                }
+                else
+                {
+                    var msgError = await respuestaHttp.ObtenerMensajeError();
+                    await swal.FireAsync("Error", msgError, SweetAlertIcon.Error);
+                }
+            }
+            else
+            {
+                Genero = respuestaHttp.Response;
+            }
         }
 
-        private void Editar()
+        private async void Editar()
         {
-            formGenero!.FormularioPosteadoConExito = true;
-            Console.WriteLine("Editando Género de Película");
-            Console.WriteLine($"Id: {Genero!.Id}");
-            Console.WriteLine($"Nombre: {Genero!.Nombre}");
-            navigationManager.NavigateTo("generos");
+            var respuestaHttp = await repo.Put("api/generos", Genero);
+            if (respuestaHttp.Error)
+            {
+                var msgError = await respuestaHttp.ObtenerMensajeError();
+                await swal.FireAsync("Error", msgError, SweetAlertIcon.Error);
+            }
+            else
+            {
+                formGenero!.FormularioPosteadoConExito = true;
+                navigationManager.NavigateTo("generos");
+            }
+            //formGenero!.FormularioPosteadoConExito = true;
+            //Console.WriteLine("Editando Género de Película");
+            //Console.WriteLine($"Id: {Genero!.Id}");
+            //Console.WriteLine($"Nombre: {Genero!.Nombre}");
+            //navigationManager.NavigateTo("generos");
         }
     }
 }

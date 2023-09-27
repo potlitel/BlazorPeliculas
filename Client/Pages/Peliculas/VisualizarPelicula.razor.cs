@@ -10,7 +10,7 @@ namespace BlazorPeliculas.Client.Pages.Peliculas
         public int PeliculaId { get; set; }
 
         [Parameter]
-        public string NombrePelicula { get; set; }
+        public string? NombrePelicula { get; set; }
 
         private PeliculaVisualizarDTO? modelo;
 

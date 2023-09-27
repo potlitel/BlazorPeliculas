@@ -1,7 +1,14 @@
 ﻿@page "/generos/editar/{GeneroId:int}"
 @inject NavigationManager navigationManager
-
+@inject IRepositorio repo
+@inject SweetAlertService swal
 <div>
     <h3>Editar Género</h3>
-    <FormularioGenero @ref="formGenero" Genero="Genero" OnValidSubmit="Editar" />
+    @if (Genero is null)
+    {
+        <p>Cargando datos de entidad Genero</p>
+    } else
+    {
+        <FormularioGenero @ref="formGenero" Genero="Genero" OnValidSubmit="Editar" />
+    }
 </div>
