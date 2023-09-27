@@ -1,3 +1,4 @@
+using AutoMapper;
 using BlazorPeliculas.Server.Helpers;
 using BlazorPeliculas.Shared.Entidades;
 using Microsoft.AspNetCore.Mvc;
@@ -11,15 +12,18 @@ namespace BlazorPeliculas.Server.Controllers
     {
         private readonly ApplicationDBContext context;
         private readonly IAlmacenadorArchivos almacenadorArchivos;
+        private readonly IMapper mapper;
         private readonly string contenedor = "personas";
 
         public ActoresController(
             ApplicationDBContext context,
-            IAlmacenadorArchivos almacenadorArchivos
+            IAlmacenadorArchivos almacenadorArchivos,
+            IMapper mapper
         )
         {
             this.context = context;
             this.almacenadorArchivos = almacenadorArchivos;
+            this.mapper = mapper;
         }
 
         [HttpGet]
@@ -42,6 +46,19 @@ namespace BlazorPeliculas.Server.Controllers
                 .ToListAsync();
         }
 
+        [HttpGet("{id:int}")]
+        public async Task<ActionResult<Actor>> Get(int id)
+        {
+            var actor = await context.Actores.FirstOrDefaultAsync(actor => actor.Id == id);
+
+            if (actor is null)
+            {
+                return NotFound();
+            }
+
+            return actor;
+        }
+
         [HttpPost]
         public async Task<ActionResult<int>> Post(Actor actor)
         {
@@ -57,6 +74,35 @@ namespace BlazorPeliculas.Server.Controllers
             context.Add(actor);
             await context.SaveChangesAsync();
             return actor.Id;
+        }
+
+        [HttpPut]
+        public async Task<ActionResult> Put(Actor actor)
+        {
+            var actorBD = await context.Actores.FirstOrDefaultAsync(a => a.Id == actor.Id);
+
+            if (actorBD is null)
+            {
+                return NotFound();
+            }
+
+            //Mapeamos todas las props de actor a actorBD menos la prop Foto
+            actorBD = mapper.Map(actor, actorBD);
+
+            if (!string.IsNullOrWhiteSpace(actor.Foto))
+            {
+                var fotoActor = Convert.FromBase64String(actor.Foto);
+                actor.Foto = await almacenadorArchivos.EditarArchivo(
+                    fotoActor,
+                    ".jpg",
+                    contenedor,
+                    actorBD.Foto!
+                );
+            }
+
+            context.Update(actorBD);
+            await context.SaveChangesAsync();
+            return NoContent();
         }
     }
 }

@@ -1,8 +1,17 @@
 ﻿@page "/peliculas/editar/{PeliculaId:int}"
 @inject NavigationManager navigationManager
+@inject IRepositorio repo
+@inject SweetAlertService swal
 
 <div>
     <h3>Editar Película</h3>
-    <FormularioPeliculas @ref="formPelicula" GenerosSeleccionados="GenerosSeleccionados" GenerosNoSeleccionados="GenerosNoSeleccionados"
-                         Pelicula="Pelicula" OnValidSubmit="Editar" />
+    @if (Pelicula is null)
+    {
+        <p>Cargando datos de película</p>
+    }
+    else
+    {
+        <FormularioPeliculas @ref="formPelicula" GenerosSeleccionados="GenerosSeleccionados" GenerosNoSeleccionados="GenerosNoSeleccionados"
+                             Pelicula="Pelicula" OnValidSubmit="Editar" ActoresSeleccionados="ActoresSeleccionados" />
+    }
 </div>

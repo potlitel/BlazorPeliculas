@@ -1,4 +1,5 @@
 using BlazorPeliculas.Shared.Entidades;
+using CurrieTechnologies.Razor.SweetAlert2;
 using Microsoft.AspNetCore.Components;
 
 namespace BlazorPeliculas.Client.Pages.Actores
@@ -8,30 +9,60 @@ namespace BlazorPeliculas.Client.Pages.Actores
         [Parameter]
         public int ActorId { get; set; }
 
-        public EditarActor()
-        { }
+        public EditarActor() { }
 
         private FormularioActores? formActor;
 
         private Actor? Actor;
 
-        protected override void OnInitialized()
+        protected override async Task OnInitializedAsync()
         {
-            Actor = new Actor()
+            var respuestaHttp = await repo.Get<Actor>($"api/actores/{ActorId}");
+            if (respuestaHttp.Error)
             {
-                Id = ActorId,
-                Nombre = "Alain Jorge Acuña",
-                FechaNacimiento = DateTime.Today
-            };
+                if (
+                    respuestaHttp.HttpResponseMessage.StatusCode
+                    == System.Net.HttpStatusCode.NotFound
+                )
+                {
+                    navigationManager.NavigateTo("actores");
+                }
+                else
+                {
+                    var msgError = await respuestaHttp.ObtenerMensajeError();
+                    await swal.FireAsync("Error", msgError, SweetAlertIcon.Error);
+                }
+            }
+            else
+            {
+                Actor = respuestaHttp.Response;
+            }
+            //Actor = new Actor()
+            //{
+            //    Id = ActorId,
+            //    Nombre = "Alain Jorge Acuña",
+            //    FechaNacimiento = DateTime.Today
+            //};
         }
 
-        private void Editar()
+        private async Task Editar()
         {
-            formActor!.FormularioPosteadoConExito = true;
-            Console.WriteLine("Editando Actor de Película");
-            Console.WriteLine($"Id: {Actor!.Id}");
-            Console.WriteLine($"Nombre: {Actor!.Nombre}");
-            navigationManager.NavigateTo("generos");
+            var respuestaHttp = await repo.Put("api/actores", Actor);
+            if (respuestaHttp.Error)
+            {
+                var msgError = await respuestaHttp.ObtenerMensajeError();
+                await swal.FireAsync("Error", msgError, SweetAlertIcon.Error);
+            }
+            else
+            {
+                //formGenero!.FormularioPosteadoConExito = true;
+                navigationManager.NavigateTo("actores");
+            }
+            //formActor!.FormularioPosteadoConExito = true;
+            //Console.WriteLine("Editando Actor de Película");
+            //Console.WriteLine($"Id: {Actor!.Id}");
+            //Console.WriteLine($"Nombre: {Actor!.Nombre}");
+            //navigationManager.NavigateTo("generos");
         }
     }
 }

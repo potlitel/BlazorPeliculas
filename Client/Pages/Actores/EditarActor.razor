@@ -1,7 +1,16 @@
 ﻿@page "/actores/editar/{ActorId:int}"
 @inject NavigationManager navigationManager
+@inject IRepositorio repo
+@inject SweetAlertService swal
 
 <div>
-    <h3>Editar Género</h3>
-    <FormularioActores @ref="formActor" Actor="Actor" OnValidSubmit="Editar" />
+    <h3>Editar Actor</h3>
+    @if (Actor is null)
+    {
+        <p>Cargando datos de entidad Actor</p>
+    }
+    else
+    {
+        <FormularioActores @ref="formActor" Actor="Actor" OnValidSubmit="Editar" />
+    }
 </div>

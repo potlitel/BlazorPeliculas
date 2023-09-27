@@ -28,7 +28,7 @@ namespace BlazorPeliculas.Client.Shared
                 imagenBase64 = Convert.ToBase64String(arrBytes);
                 imagenUrl = null;
                 await imagenSeleccionada.InvokeAsync(imagenBase64);
-                Console.WriteLine(imagenBase64);
+                //Console.WriteLine(imagenBase64);
                 StateHasChanged();
             }
         }

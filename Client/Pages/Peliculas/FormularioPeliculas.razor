@@ -1,6 +1,6 @@
 ﻿@inject SweetAlertService swal
 @inject IRepositorio repo
-<NavigationLock OnBeforeInternalNavigation="OnBeforeInternalNavigation"></NavigationLock>
+@* <NavigationLock OnBeforeInternalNavigation="OnBeforeInternalNavigation"></NavigationLock> *@
 
 <EditForm Model="Pelicula" OnValidSubmit="OnDataAnnotationValidated">
     <DataAnnotationsValidator />
@@ -60,7 +60,7 @@
                     @Actor.Nombre / <input type="text" placeholder="Personaje" @bind="Actor.Personaje" />
                 </MyListTemplate>
                 <MyResultTemplate>
-                    <img style="width: 50px" src="@Actor.Foto" />
+                    <img style="width: 50px" src="@Actor.Foto" class="rounded-3" />
                     @Actor.Nombre
                 </MyResultTemplate>
             </SelectorMultipleTypeahead1>

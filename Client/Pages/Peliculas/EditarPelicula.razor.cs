@@ -1,4 +1,6 @@
+using BlazorPeliculas.Shared.DTOs;
 using BlazorPeliculas.Shared.Entidades;
+using CurrieTechnologies.Razor.SweetAlert2;
 using Microsoft.AspNetCore.Components;
 
 namespace BlazorPeliculas.Client.Pages.Peliculas
@@ -11,41 +13,61 @@ namespace BlazorPeliculas.Client.Pages.Peliculas
         private FormularioPeliculas? formPelicula;
 
         private Pelicula? Pelicula;
-
         private List<Genero> GenerosNoSeleccionados = new List<Genero>();
         private List<Genero> GenerosSeleccionados = new List<Genero>();
+        private List<Actor> ActoresSeleccionados = new List<Actor>();
 
         public EditarPelicula()
         { }
 
-        protected override void OnInitialized()
+        protected override async Task OnInitializedAsync()
         {
-            Pelicula = new Pelicula()
+            var responseHttp = await repo.Get<PeliculaActualizacionDTO>(
+                $"api/peliculas/actualizar/{PeliculaId}"
+            );
+            if (responseHttp.Error)
             {
-                Id = PeliculaId,
-                //Nombre = "Alain Jorge Acuña",
-                //FechaNacimiento = DateTime.Today
-            };
-            GenerosNoSeleccionados = new List<Genero>()
+                if (
+                    responseHttp.HttpResponseMessage.StatusCode
+                    == System.Net.HttpStatusCode.NotFound
+                )
+                {
+                    navigationManager.NavigateTo("/");
+                }
+                else
+                {
+                    var msgError = await responseHttp.ObtenerMensajeError();
+                    await swal.FireAsync("Error", msgError, SweetAlertIcon.Error);
+                }
+            }
+            else
             {
-                new Genero() { Id = 1, Nombre = "Comedia" },
-                new Genero() { Id = 3, Nombre = "Acción" },
-                new Genero() { Id = 4, Nombre = "Sci-fi" },
-            };
-
-            GenerosSeleccionados = new List<Genero>()
-            {
-                new Genero() { Id = 2, Nombre = "Drama" }
-            };
+                var modelo = responseHttp.Response!;
+                ActoresSeleccionados = modelo.Actores;
+                GenerosNoSeleccionados = modelo.GenerosNoSeleccionados;
+                GenerosSeleccionados = modelo.GenerosSeleccionados;
+                Pelicula = modelo.Pelicula;
+            }
         }
 
-        private void Editar()
+        private async Task Editar()
         {
-            formPelicula!.FormularioPosteadoConExito = true;
-            Console.WriteLine("Editando Actor de Película");
-            Console.WriteLine($"Id: {Pelicula!.Id}");
-            Console.WriteLine($"Titulo: {Pelicula!.Titulo}");
-            navigationManager.NavigateTo("generos");
+            var respuestaHttp = await repo.Put("api/peliculas", Pelicula);
+            if (respuestaHttp.Error)
+            {
+                var msgError = await respuestaHttp.ObtenerMensajeError();
+                await swal.FireAsync("Error", msgError, SweetAlertIcon.Error);
+            }
+            else
+            {
+                //formGenero!.FormularioPosteadoConExito = true;
+                navigationManager.NavigateTo($"pelicula/{PeliculaId}");
+            }
+            //formPelicula!.FormularioPosteadoConExito = true;
+            //Console.WriteLine("Editando Actor de Película");
+            //Console.WriteLine($"Id: {Pelicula!.Id}");
+            //Console.WriteLine($"Titulo: {Pelicula!.Titulo}");
+            //navigationManager.NavigateTo("generos");
         }
     }
 }

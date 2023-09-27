@@ -18,7 +18,7 @@
         <a href="@urlPelicula" class="text-decoration-none">@((MarkupString)pelicula.Titulo)</a>
     </p>
     <div>
-        <a class="btn btn-info">Editar</a>
+        <a class="btn btn-info" href="peliculas/Editar/@pelicula.Id">Editar</a>
         <button type="button" class="btn btn-danger" @onclick="(() => EliminarPeli.InvokeAsync(pelicula))">Borrar</button>
     </div>
 
