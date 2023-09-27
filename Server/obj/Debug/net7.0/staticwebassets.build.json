@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "bbkXaiM1DOnlQvwPpJTp5h4V3d+PhpB7YzZvKBzCYPM=",
+  "Hash": "i+iSkUbsuA8HSopK3Z/mJ2Oyj3nmMKGj68TwLFQ9Tlo=",
   "Source": "BlazorPeliculas.Server",
   "BasePath": "_content/BlazorPeliculas.Server",
   "Mode": "Default",
@@ -8009,6 +8009,40 @@
       "OriginalItemSpec": "wwwroot\\js\\Utilidades.js"
     },
     {
+      "Identity": "G:\\Trabajo\\GitProjects\\Real-Projects\\BlazorPeliculas\\Server\\wwwroot\\peliculas\\2db44159-c520-44ba-8a1b-714debe21689.jpg",
+      "SourceId": "BlazorPeliculas.Server",
+      "SourceType": "Discovered",
+      "ContentRoot": "G:\\Trabajo\\GitProjects\\Real-Projects\\BlazorPeliculas\\Server\\wwwroot\\",
+      "BasePath": "_content/BlazorPeliculas.Server",
+      "RelativePath": "peliculas/2db44159-c520-44ba-8a1b-714debe21689.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\peliculas\\2db44159-c520-44ba-8a1b-714debe21689.jpg"
+    },
+    {
+      "Identity": "G:\\Trabajo\\GitProjects\\Real-Projects\\BlazorPeliculas\\Server\\wwwroot\\peliculas\\83b1977b-67d7-44f6-9c16-7e9245a34d87.jpg",
+      "SourceId": "BlazorPeliculas.Server",
+      "SourceType": "Discovered",
+      "ContentRoot": "G:\\Trabajo\\GitProjects\\Real-Projects\\BlazorPeliculas\\Server\\wwwroot\\",
+      "BasePath": "_content/BlazorPeliculas.Server",
+      "RelativePath": "peliculas/83b1977b-67d7-44f6-9c16-7e9245a34d87.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\peliculas\\83b1977b-67d7-44f6-9c16-7e9245a34d87.jpg"
+    },
+    {
       "Identity": "G:\\Trabajo\\GitProjects\\Real-Projects\\BlazorPeliculas\\Server\\wwwroot\\peliculas\\cb03b103-098b-4229-a915-603fdde04539.jpg",
       "SourceId": "BlazorPeliculas.Server",
       "SourceType": "Discovered",
@@ -8024,23 +8058,6 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\peliculas\\cb03b103-098b-4229-a915-603fdde04539.jpg"
-    },
-    {
-      "Identity": "G:\\Trabajo\\GitProjects\\Real-Projects\\BlazorPeliculas\\Server\\wwwroot\\peliculas\\d73f7cfc-b802-4304-bbb1-ebf8c2f630fc.jpg",
-      "SourceId": "BlazorPeliculas.Server",
-      "SourceType": "Discovered",
-      "ContentRoot": "G:\\Trabajo\\GitProjects\\Real-Projects\\BlazorPeliculas\\Server\\wwwroot\\",
-      "BasePath": "_content/BlazorPeliculas.Server",
-      "RelativePath": "peliculas/d73f7cfc-b802-4304-bbb1-ebf8c2f630fc.jpg",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\peliculas\\d73f7cfc-b802-4304-bbb1-ebf8c2f630fc.jpg"
     },
     {
       "Identity": "G:\\Trabajo\\GitProjects\\Real-Projects\\BlazorPeliculas\\Server\\wwwroot\\peliculas\\e4bd8b86-7eaf-43f3-a7f3-5f13b637fa6d.jpg",

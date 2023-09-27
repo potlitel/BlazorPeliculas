@@ -1,5 +1,8 @@
 ﻿@page "/actores"
 @inject IRepositorio repo
+@inject IRepositorio repositorio
+@inject SweetAlertService swal
+@inject NavigationManager navigationManager
 
 <h3>Listado actores</h3>
 <div class="mb-3">
@@ -21,7 +24,7 @@
                     <tr>
                         <td>
                             <a href="actores/editar/@item.Id" class="btn btn-success">Editar</a>
-                            <button class="btn btn-danger">Borrar</button>
+                            <button class="btn btn-danger" @onclick="(() => Borrar(item))">Borrar</button>
                         </td>
                         <td>
                             @item.Nombre

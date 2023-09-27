@@ -104,5 +104,22 @@ namespace BlazorPeliculas.Server.Controllers
             await context.SaveChangesAsync();
             return NoContent();
         }
+
+        [HttpDelete("{id:int}")]
+        public async Task<ActionResult> Delete(int id)
+        {
+            var actorBD = await context.Actores.FirstOrDefaultAsync(act => act.Id == id);
+
+            if (actorBD is null)
+            {
+                return NotFound();
+            }
+
+            context.Remove(actorBD);
+            await context.SaveChangesAsync();
+            await almacenadorArchivos.EliminarArchivo(actorBD.Foto!, contenedor);
+
+            return NoContent();
+        }
     }
 }

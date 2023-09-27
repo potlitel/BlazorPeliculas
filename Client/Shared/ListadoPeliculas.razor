@@ -1,4 +1,7 @@
 @inject IJSRuntime js
+@inject IRepositorio repo
+@inject SweetAlertService swal
+@inject NavigationManager navigationManager
 
 @* expresión implícita *@
 @* <p>Hola, @UtilidadesString.Transformar(nombre)</p> *@
@@ -49,7 +52,7 @@
         <ListadoGenerico listado="pelis">
             <HayRegistros Context="pelicula">
                 @* <PeliculaIndividual pelicula="pelicula" MostrarBotones="MostrarBotones" EliminarPeli="EliminarPeli" /> *@
-                <PeliculaIndividual pelicula="pelicula" />
+                <PeliculaIndividual pelicula="pelicula" EliminarPeli="EliminarPeli" />
             </HayRegistros>
         </ListadoGenerico>
     </div>
@@ -120,35 +123,22 @@
             };
     }
 
-    List<Pelicula> ObtenerPeliculas()
-    {
-        return new List<Pelicula>(){
-new Pelicula
-{
-Titulo = "<b>Wakanda Forever</b>",
-FechaLanzamiento = new DateTime(2023, 9, 11)
-},
-new Pelicula
-{
-Titulo = "<i>Moana</i>",
-FechaLanzamiento = new DateTime(2016, 11, 13)
-},
-new Pelicula
-{
-Titulo = "Inception",
-FechaLanzamiento = new DateTime(2010, 7, 16)
-}
-};
-    }
-
     private async Task EliminarPeli(Pelicula peliName)
     {
-        // var confirmado = await js.InvokeAsync<bool>("confirm", $"Desea borrar la película {peliName.Titulo}?");
         var confirmado = await js.Confirm($"Desea borrar la película {peliName.Titulo}?");
         if (confirmado)
         {
-            Console.WriteLine($"Eliminando la película {peliName.Titulo}");
-            pelis.Remove(peliName);
+            var respuestaHttp = await repo.Delete($"api/peliculas/{peliName.Id}");
+
+            if (respuestaHttp.Error)
+            {
+                var msgError = await respuestaHttp.ObtenerMensajeError();
+                await swal.FireAsync("Error", msgError, SweetAlertIcon.Error);
+            }
+            else
+            {
+                pelis.Remove(peliName);
+            }
         }
     }
 

@@ -50,5 +50,20 @@ namespace BlazorPeliculas.Server.Controllers
             await context.SaveChangesAsync();
             return NoContent();
         }
+
+        [HttpDelete("api/generos/{id:int}")]
+        public async Task<ActionResult> Delete(int id)
+        {
+            var filasAfectadas = await context.Generos
+                .Where(gen => gen.Id == id)
+                .ExecuteDeleteAsync();
+
+            if (filasAfectadas == 0)
+            {
+                return NotFound();
+            }
+
+            return NoContent();
+        }
     }
 }

@@ -45,6 +45,16 @@ namespace BlazorPeliculas.Client.Repositorios
             );
         }
 
+        public async Task<HttpResponseWrapper<object>> Delete(string url)
+        {
+            var respuestaHttp = await httpClient.DeleteAsync(url);
+            return new HttpResponseWrapper<object>(
+                null,
+                !respuestaHttp.IsSuccessStatusCode,
+                respuestaHttp
+            );
+        }
+
         public async Task<HttpResponseWrapper<object>> Post<T>(string url, T enviar)
         {
             var enviarJson = JsonSerializer.Serialize(enviar);
