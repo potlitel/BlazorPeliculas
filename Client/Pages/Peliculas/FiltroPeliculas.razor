@@ -1,11 +1,12 @@
 ﻿@page "/peliculas/buscar"
-@inject IRepositorio repositorio
+@inject IRepositorio repo
+@inject NavigationManager navigationManager
 
 <h3>Filtro películas</h3>
 
 <div class="row g-3 align-items-center mb-3">
     <div class="col-sm-3">
-        <input type="text" class="form-control" id="titulo" placeholder="Título película" @bind-value="titulo" @bind-value:event="oninput"
+        <input type="text" class="form-control" id="titulo" autocomplete="off" placeholder="Título película" @bind-value="titulo" @bind-value:event="oninput"
         @onkeypress="@((KeyboardEventArgs e) => TituloKeyPress(e))" />
     </div>
 
@@ -39,5 +40,6 @@
         <button type="button" class="btn btn-danger" @onclick="LimpiarCampos">Limpiar</button>
     </div>
 
+    <Paginacion PaginaActual="paginaActual" PaginasTotales="paginasTotales" PaginaSeleccionada="PaginaSeleccionada" />
     <ListadoPeliculas pelis="peliculas"></ListadoPeliculas>
 </div>

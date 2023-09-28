@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "i+iSkUbsuA8HSopK3Z/mJ2Oyj3nmMKGj68TwLFQ9Tlo=",
+  "Hash": "xYCUncmtHSo45CJm7YzILoKrcan526iqavo/ZN5h3V8=",
   "Source": "BlazorPeliculas.Server",
   "BasePath": "_content/BlazorPeliculas.Server",
   "Mode": "Default",
@@ -8043,23 +8043,6 @@
       "OriginalItemSpec": "wwwroot\\peliculas\\83b1977b-67d7-44f6-9c16-7e9245a34d87.jpg"
     },
     {
-      "Identity": "G:\\Trabajo\\GitProjects\\Real-Projects\\BlazorPeliculas\\Server\\wwwroot\\peliculas\\cb03b103-098b-4229-a915-603fdde04539.jpg",
-      "SourceId": "BlazorPeliculas.Server",
-      "SourceType": "Discovered",
-      "ContentRoot": "G:\\Trabajo\\GitProjects\\Real-Projects\\BlazorPeliculas\\Server\\wwwroot\\",
-      "BasePath": "_content/BlazorPeliculas.Server",
-      "RelativePath": "peliculas/cb03b103-098b-4229-a915-603fdde04539.jpg",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\peliculas\\cb03b103-098b-4229-a915-603fdde04539.jpg"
-    },
-    {
       "Identity": "G:\\Trabajo\\GitProjects\\Real-Projects\\BlazorPeliculas\\Server\\wwwroot\\peliculas\\e4bd8b86-7eaf-43f3-a7f3-5f13b637fa6d.jpg",
       "SourceId": "BlazorPeliculas.Server",
       "SourceType": "Discovered",
@@ -8075,23 +8058,6 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\peliculas\\e4bd8b86-7eaf-43f3-a7f3-5f13b637fa6d.jpg"
-    },
-    {
-      "Identity": "G:\\Trabajo\\GitProjects\\Real-Projects\\BlazorPeliculas\\Server\\wwwroot\\peliculas\\e93ed04c-2ca9-4cd1-b679-be11790658d8.jpg",
-      "SourceId": "BlazorPeliculas.Server",
-      "SourceType": "Discovered",
-      "ContentRoot": "G:\\Trabajo\\GitProjects\\Real-Projects\\BlazorPeliculas\\Server\\wwwroot\\",
-      "BasePath": "_content/BlazorPeliculas.Server",
-      "RelativePath": "peliculas/e93ed04c-2ca9-4cd1-b679-be11790658d8.jpg",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\peliculas\\e93ed04c-2ca9-4cd1-b679-be11790658d8.jpg"
     },
     {
       "Identity": "G:\\Trabajo\\GitProjects\\Real-Projects\\BlazorPeliculas\\Server\\wwwroot\\personas\\02651312-21b4-48b3-8876-4c7c8579ee32.jpg",
