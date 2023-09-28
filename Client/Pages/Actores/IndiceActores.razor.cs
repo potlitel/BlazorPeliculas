@@ -6,16 +6,29 @@ namespace BlazorPeliculas.Client.Pages.Actores
     public partial class IndiceActores
     {
         public List<Actor>? Actores { get; set; }
+        private int paginaActual = 1;
+        private int paginasTotales;
 
         protected override async Task OnInitializedAsync()
         {
             await CargarDatos();
         }
 
-        private async Task CargarDatos()
+        private async Task PaginaSeleccionada(int pagina)
         {
-            var respuestaHttp = await repo.Get<List<Actor>>("api/actores");
+            paginaActual = pagina;
+            await CargarDatos(pagina);
+        }
+
+        private async Task CargarDatos(int pagina = 1)
+        {
+            var respuestaHttp = await repo.Get<List<Actor>>($"api/actores?pagina={pagina}");
             Actores = respuestaHttp.Response!;
+            paginasTotales = int.Parse(
+                respuestaHttp.HttpResponseMessage.Headers
+                    .GetValues("totalPaginas")
+                    .FirstOrDefault()!
+            );
         }
 
         private async Task Borrar(Actor actor)

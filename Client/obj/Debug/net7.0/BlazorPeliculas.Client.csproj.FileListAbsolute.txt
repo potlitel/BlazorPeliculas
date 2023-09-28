@@ -869,3 +869,4 @@ G:\Trabajo\GitProjects\Real-Projects\BlazorPeliculas\Client\obj\Debug\net7.0\Bla
 G:\Trabajo\GitProjects\Real-Projects\BlazorPeliculas\Client\obj\Debug\net7.0\refint\BlazorPeliculas.Client.dll
 G:\Trabajo\GitProjects\Real-Projects\BlazorPeliculas\Client\obj\Debug\net7.0\BlazorPeliculas.Client.pdb
 G:\Trabajo\GitProjects\Real-Projects\BlazorPeliculas\Client\obj\Debug\net7.0\ref\BlazorPeliculas.Client.dll
+G:\Trabajo\GitProjects\Real-Projects\BlazorPeliculas\Client\obj\Debug\net7.0\scopedcss\Shared\Paginacion.razor.rz.scp.css
