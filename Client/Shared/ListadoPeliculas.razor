@@ -52,7 +52,7 @@
         <ListadoGenerico listado="pelis">
             <HayRegistros Context="pelicula">
                 @* <PeliculaIndividual pelicula="pelicula" MostrarBotones="MostrarBotones" EliminarPeli="EliminarPeli" /> *@
-                <PeliculaIndividual pelicula="pelicula" EliminarPeli="EliminarPeli" />
+                <PeliculaIndividual pelicula="pelicula" EliminarPeli="EliminarPeli" @key="pelicula.Id" />
             </HayRegistros>
         </ListadoGenerico>
     </div>

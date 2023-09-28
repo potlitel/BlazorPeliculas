@@ -102,3 +102,5 @@ G:\Trabajo\GitProjects\Real-Projects\BlazorPeliculas\Server\obj\Debug\net7.0\Bla
 G:\Trabajo\GitProjects\Real-Projects\BlazorPeliculas\Server\obj\Debug\net7.0\ref\BlazorPeliculas.Server.dll
 G:\Trabajo\GitProjects\Real-Projects\BlazorPeliculas\Server\bin\Debug\net7.0\AutoMapper.dll
 G:\Trabajo\GitProjects\Real-Projects\BlazorPeliculas\Server\bin\Debug\net7.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
+G:\Trabajo\GitProjects\Real-Projects\BlazorPeliculas\Server\bin\Debug\net7.0\Microsoft.AspNetCore.Components.Authorization.dll
+G:\Trabajo\GitProjects\Real-Projects\BlazorPeliculas\Server\bin\Debug\net7.0\Microsoft.AspNetCore.Components.WebAssembly.Authentication.dll
