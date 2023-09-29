@@ -7,11 +7,11 @@ namespace BlazorPeliculas.Client.Pages
 {
     public partial class Counter
     {
-        [Inject]
-        private ServicioSingleton singleton { get; set; } = null!;
+        //[Inject]
+        //private ServicioSingleton singleton { get; set; } = null!;
 
-        [Inject]
-        private ServicioTransient transient { get; set; } = null!;
+        //[Inject]
+        //private ServicioTransient transient { get; set; } = null!;
 
         [Inject]
         private IJSRuntime js { get; set; } = null!;
@@ -40,8 +40,8 @@ namespace BlazorPeliculas.Client.Pages
 
             currentCount++;
             currentCountStatic = currentCount;
-            singleton.valor = currentCount;
-            transient.valor = currentCount;
+            //singleton.valor = currentCount;
+            //transient.valor = currentCount;
             //await js.InvokeVoidAsync("pruebaPuntoNetStatic");
 
             await js.InvokeVoidAsync("alert", $"El maximo es {max} y el min es {min}");

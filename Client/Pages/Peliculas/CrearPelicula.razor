@@ -1,7 +1,9 @@
 ﻿@page "/peliculas/crear"
+@using Microsoft.AspNetCore.Authorization;
 @inject NavigationManager navigationManager
 @inject IRepositorio repositorio
 @inject SweetAlertService swal
+@attribute [Authorize(Roles = "admin")]
 
 <div>
     <h3>Crea Película</h3>

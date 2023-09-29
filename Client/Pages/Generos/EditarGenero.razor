@@ -1,13 +1,16 @@
 ﻿@page "/generos/editar/{GeneroId:int}"
+@using Microsoft.AspNetCore.Authorization;
 @inject NavigationManager navigationManager
 @inject IRepositorio repo
 @inject SweetAlertService swal
+@attribute [Authorize(Roles = "admin")]
 <div>
     <h3>Editar Género</h3>
     @if (Genero is null)
     {
         <p>Cargando datos de entidad Genero</p>
-    } else
+    }
+    else
     {
         <FormularioGenero @ref="formGenero" Genero="Genero" OnValidSubmit="Editar" />
     }

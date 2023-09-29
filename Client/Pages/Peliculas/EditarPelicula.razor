@@ -1,7 +1,9 @@
 ﻿@page "/peliculas/editar/{PeliculaId:int}"
+@using Microsoft.AspNetCore.Authorization;
 @inject NavigationManager navigationManager
 @inject IRepositorio repo
 @inject SweetAlertService swal
+@attribute [Authorize(Roles = "admin")]
 
 <div>
     <h3>Editar Película</h3>
