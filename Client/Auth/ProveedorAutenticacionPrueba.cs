@@ -19,7 +19,7 @@ namespace BlazorPeliculas.Client.Auth
                 },
                 authenticationType: "prueba"
             ); //Claims se refiere a datos acerca de un user
-            return await Task.FromResult(new AuthenticationState(new ClaimsPrincipal(testingUser)));
+            return await Task.FromResult(new AuthenticationState(new ClaimsPrincipal(anonimo)));
         }
     }
 }

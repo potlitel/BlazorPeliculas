@@ -1,6 +1,7 @@
 using BlazorPeliculas.Client.Helpers;
 using MathNet.Numerics.Statistics;
 using Microsoft.AspNetCore.Components;
+using Microsoft.AspNetCore.Components.Authorization;
 using Microsoft.JSInterop;
 
 namespace BlazorPeliculas.Client.Pages
@@ -24,6 +25,9 @@ namespace BlazorPeliculas.Client.Pages
         [CascadingParameter]
         protected AppState AppState { get; set; } = null!;
 
+        [CascadingParameter]
+        private Task<AuthenticationState> authStateTask { get; set; } = null!;
+
         private IJSObjectReference? modulo;
 
         private int currentCount = 0;
@@ -38,13 +42,20 @@ namespace BlazorPeliculas.Client.Pages
             var max = arreglo.Maximum();
             var min = arreglo.Minimum();
 
-            currentCount++;
-            currentCountStatic = currentCount;
+            //currentCount++;
+            //currentCountStatic = currentCount;
             //singleton.valor = currentCount;
             //transient.valor = currentCount;
             //await js.InvokeVoidAsync("pruebaPuntoNetStatic");
+            //await js.InvokeVoidAsync("alert", $"El maximo es {max} y el min es {min}");
 
-            await js.InvokeVoidAsync("alert", $"El maximo es {max} y el min es {min}");
+            var resultAuthStateTask = await authStateTask;
+            var userAuthenticated = resultAuthStateTask.User.Identity!.IsAuthenticated;
+
+            if (userAuthenticated)
+                currentCount += 1;
+            else
+                currentCount -= 1;
         }
 
         [JSInvokable]
