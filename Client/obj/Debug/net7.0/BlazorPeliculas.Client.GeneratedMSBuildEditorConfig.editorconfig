@@ -20,6 +20,10 @@ build_property._RazorSourceGeneratorDebug =
 build_metadata.AdditionalFiles.TargetPath = QXBwLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
+[G:/Trabajo/GitProjects/Real-Projects/BlazorPeliculas/Client/Auth/Logout.razor]
+build_metadata.AdditionalFiles.TargetPath = QXV0aFxMb2dvdXQucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
 [G:/Trabajo/GitProjects/Real-Projects/BlazorPeliculas/Client/Pages/FetchData.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRmV0Y2hEYXRhLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
@@ -84,6 +88,14 @@ build_metadata.AdditionalFiles.CssScope = b-ier2ukgyv6
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWN0b3Jlc1xJbmRpY2VBY3RvcmVzLnJhem9y
 build_metadata.AdditionalFiles.CssScope = b-oihosw1ks8
 
+[G:/Trabajo/GitProjects/Real-Projects/BlazorPeliculas/Client/Pages/Auth/Login.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQXV0aFxMb2dpbi5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = b-qhnam2oxm4
+
+[G:/Trabajo/GitProjects/Real-Projects/BlazorPeliculas/Client/Pages/Auth/Registro.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQXV0aFxSZWdpc3Ryby5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = b-ijc5css1c7
+
 [G:/Trabajo/GitProjects/Real-Projects/BlazorPeliculas/Client/Pages/Counter.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ291bnRlci5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = b-a2z283tr5e
@@ -127,6 +139,10 @@ build_metadata.AdditionalFiles.CssScope = b-2n6ym77meg
 [G:/Trabajo/GitProjects/Real-Projects/BlazorPeliculas/Client/Shared/CustomInputImg.razor]
 build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXEN1c3RvbUlucHV0SW1nLnJhem9y
 build_metadata.AdditionalFiles.CssScope = b-q8y8ufjyvk
+
+[G:/Trabajo/GitProjects/Real-Projects/BlazorPeliculas/Client/Shared/EnlacesAuth.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXEVubGFjZXNBdXRoLnJhem9y
+build_metadata.AdditionalFiles.CssScope = b-lte72cy1ox
 
 [G:/Trabajo/GitProjects/Real-Projects/BlazorPeliculas/Client/Shared/InputMarkdown.razor]
 build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXElucHV0TWFya2Rvd24ucmF6b3I=

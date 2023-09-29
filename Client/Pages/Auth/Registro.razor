@@ -1,0 +1,32 @@
+﻿@page "/Registro"
+@using BlazorPeliculas.Client.Auth;
+@inject IRepositorio repo
+@inject SweetAlertService swal
+@inject NavigationManager navigationManager
+@inject ILoginService loginService
+
+<h3>Registro</h3>
+
+
+<EditForm Model="userInfo" OnValidSubmit="CrearUsuario">
+    <DataAnnotationsValidator />
+
+    <div class="mb-3">
+        <label>Email:</label>
+        <div>
+            <InputText class="form-control" @bind-Value="userInfo.Email" />
+            <ValidationMessage For="@(() => userInfo.Email)" />
+        </div>
+    </div>
+
+    <div class="mb-3">
+        <label>Password:</label>
+        <div>
+            <InputText class="form-control" type="password" @bind-Value="userInfo.Password" />
+            <ValidationMessage For="@(() => userInfo.Password)" />
+        </div>
+    </div>
+
+    <button class="btn btn-primary" type="submit">Registrar</button>
+
+</EditForm>

@@ -71,7 +71,7 @@ namespace BlazorPeliculas.Server.Controllers
                 new Claim("mivalor", "lo que sea"),
             };
 
-            var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(configuration["jwt"]!));
+            var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(configuration["jwtkey"]!));
             var creds = new SigningCredentials(key, SecurityAlgorithms.HmacSha256);
 
             var expiration = DateTime.UtcNow.AddHours(1);
