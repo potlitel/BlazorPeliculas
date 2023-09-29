@@ -2,6 +2,8 @@ using AutoMapper;
 using BlazorPeliculas.Server.Helpers;
 using BlazorPeliculas.Shared.DTOs;
 using BlazorPeliculas.Shared.Entidades;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
@@ -28,6 +30,7 @@ namespace BlazorPeliculas.Server.Controllers
         }
 
         [HttpGet]
+        [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
         public async Task<ActionResult<HomePageDTO>> Get()
         {
             var limite = 6;

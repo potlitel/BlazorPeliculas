@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "vjdxztJ9iIM1IepTlV1VggWdUGbrH7zXiisDev0S2NY=",
+  "Hash": "PDYNPpvHqFNT+Vj/hZkm+lrOi6ZC7ByBBHJ4SdBv7/Y=",
   "Source": "BlazorPeliculas.Client",
   "BasePath": "/",
   "Mode": "Root",
@@ -833,6 +833,23 @@
       "OriginalItemSpec": "C:\\Users\\potlitel\\.nuget\\packages\\microsoft.netcore.app.runtime.mono.browser-wasm\\7.0.11\\runtimes\\browser-wasm\\native\\dotnet.wasm"
     },
     {
+      "Identity": "G:\\Trabajo\\GitProjects\\Real-Projects\\BlazorPeliculas\\Client\\bin\\Debug\\net7.0\\wwwroot\\_framework\\icudt.dat",
+      "SourceId": "BlazorPeliculas.Client",
+      "SourceType": "Computed",
+      "ContentRoot": "G:\\Trabajo\\GitProjects\\Real-Projects\\BlazorPeliculas\\Client\\bin\\Debug\\net7.0\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "_framework/icudt.dat",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "BlazorWebAssemblyResource",
+      "AssetTraitValue": "native",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "C:\\Users\\potlitel\\.nuget\\packages\\microsoft.netcore.app.runtime.mono.browser-wasm\\7.0.11\\runtimes\\browser-wasm\\native\\icudt.dat"
+    },
+    {
       "Identity": "G:\\Trabajo\\GitProjects\\Real-Projects\\BlazorPeliculas\\Client\\bin\\Debug\\net7.0\\wwwroot\\_framework\\icudt_CJK.dat",
       "SourceId": "BlazorPeliculas.Client",
       "SourceType": "Computed",
@@ -882,23 +899,6 @@
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
       "OriginalItemSpec": "C:\\Users\\potlitel\\.nuget\\packages\\microsoft.netcore.app.runtime.mono.browser-wasm\\7.0.11\\runtimes\\browser-wasm\\native\\icudt_no_CJK.dat"
-    },
-    {
-      "Identity": "G:\\Trabajo\\GitProjects\\Real-Projects\\BlazorPeliculas\\Client\\bin\\Debug\\net7.0\\wwwroot\\_framework\\icudt.dat",
-      "SourceId": "BlazorPeliculas.Client",
-      "SourceType": "Computed",
-      "ContentRoot": "G:\\Trabajo\\GitProjects\\Real-Projects\\BlazorPeliculas\\Client\\bin\\Debug\\net7.0\\wwwroot\\",
-      "BasePath": "/",
-      "RelativePath": "_framework/icudt.dat",
-      "AssetKind": "Build",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "RelatedAsset": "",
-      "AssetTraitName": "BlazorWebAssemblyResource",
-      "AssetTraitValue": "native",
-      "CopyToOutputDirectory": "PreserveNewest",
-      "CopyToPublishDirectory": "Never",
-      "OriginalItemSpec": "C:\\Users\\potlitel\\.nuget\\packages\\microsoft.netcore.app.runtime.mono.browser-wasm\\7.0.11\\runtimes\\browser-wasm\\native\\icudt.dat"
     },
     {
       "Identity": "G:\\Trabajo\\GitProjects\\Real-Projects\\BlazorPeliculas\\Client\\bin\\Debug\\net7.0\\wwwroot\\_framework\\Markdig.dll",
@@ -7854,23 +7854,6 @@
       "OriginalItemSpec": "wwwroot\\css\\bootstrap\\bootstrap.min.css.map"
     },
     {
-      "Identity": "G:\\Trabajo\\GitProjects\\Real-Projects\\BlazorPeliculas\\Client\\wwwroot\\css\\open-iconic\\FONT-LICENSE",
-      "SourceId": "BlazorPeliculas.Client",
-      "SourceType": "Discovered",
-      "ContentRoot": "G:\\Trabajo\\GitProjects\\Real-Projects\\BlazorPeliculas\\Client\\wwwroot\\",
-      "BasePath": "/",
-      "RelativePath": "css/open-iconic/FONT-LICENSE",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\css\\open-iconic\\FONT-LICENSE"
-    },
-    {
       "Identity": "G:\\Trabajo\\GitProjects\\Real-Projects\\BlazorPeliculas\\Client\\wwwroot\\css\\open-iconic\\font\\css\\open-iconic-bootstrap.min.css",
       "SourceId": "BlazorPeliculas.Client",
       "SourceType": "Discovered",
@@ -7971,6 +7954,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.woff"
+    },
+    {
+      "Identity": "G:\\Trabajo\\GitProjects\\Real-Projects\\BlazorPeliculas\\Client\\wwwroot\\css\\open-iconic\\FONT-LICENSE",
+      "SourceId": "BlazorPeliculas.Client",
+      "SourceType": "Discovered",
+      "ContentRoot": "G:\\Trabajo\\GitProjects\\Real-Projects\\BlazorPeliculas\\Client\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "css/open-iconic/FONT-LICENSE",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\open-iconic\\FONT-LICENSE"
     },
     {
       "Identity": "G:\\Trabajo\\GitProjects\\Real-Projects\\BlazorPeliculas\\Client\\wwwroot\\css\\open-iconic\\ICON-LICENSE",

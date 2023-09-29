@@ -56,8 +56,16 @@
         // pelis = repo.ObtenerPeliculas();
 
         var respuestaHttp = await repo.Get<HomePageDTO>("api/peliculas/");
-        FuturosEstrenos = respuestaHttp.Response!.ProximosEstrenos;
-        EnCartelera = respuestaHttp.Response!.PeliculasEnCartelera;
+
+        if (respuestaHttp.HttpResponseMessage.IsSuccessStatusCode)
+        {
+            FuturosEstrenos = respuestaHttp.Response!.ProximosEstrenos;
+            EnCartelera = respuestaHttp.Response!.PeliculasEnCartelera;
+        }
+        else
+        {
+            Console.WriteLine(respuestaHttp.HttpResponseMessage.StatusCode);
+        }
     }
 
     List<Pelicula> ObtenerPeliculas()
