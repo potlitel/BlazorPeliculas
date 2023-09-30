@@ -901,3 +901,4 @@ G:\Trabajo\GitProjects\Real-Projects\BlazorPeliculas\Client\obj\Debug\net7.0\bui
 G:\Trabajo\GitProjects\Real-Projects\BlazorPeliculas\Client\obj\Debug\net7.0\scopedcss\Shared\EnlacesAuth.razor.rz.scp.css
 G:\Trabajo\GitProjects\Real-Projects\BlazorPeliculas\Client\obj\Debug\net7.0\scopedcss\Pages\Auth\Login.razor.rz.scp.css
 G:\Trabajo\GitProjects\Real-Projects\BlazorPeliculas\Client\obj\Debug\net7.0\scopedcss\Pages\Auth\Registro.razor.rz.scp.css
+G:\Trabajo\GitProjects\Real-Projects\BlazorPeliculas\Client\obj\Debug\net7.0\scopedcss\Shared\Rating.razor.rz.scp.css

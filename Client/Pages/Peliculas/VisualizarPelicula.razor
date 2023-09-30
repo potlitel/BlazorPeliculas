@@ -26,7 +26,7 @@
             <span>
                 | @modelo.Pelicula.FechaLanzamiento.ToString("dd MMM yyyy")
                 | Promedio: @modelo.PromedioVotos.ToString("0.#") /5
-                | Tu voyo: @modelo.VotoUsuario.ToString()
+                | Tu voto: <Rating MaximoPuntaje="5" PuntajeSeleccionado="modelo.VotoUsuario" OnRating="OnRating"></Rating>
             </span>
 
             <div class="d-flex mt-2">

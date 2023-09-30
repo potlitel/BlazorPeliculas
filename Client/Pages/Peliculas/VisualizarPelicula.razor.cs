@@ -29,5 +29,26 @@ namespace BlazorPeliculas.Client.Pages.Peliculas
                 modelo = httpResponse.Response;
             }
         }
+
+        private async Task OnRating(int votoSeleccionado)
+        {
+            modelo!.VotoUsuario = votoSeleccionado;
+            var votoPeliculaDTO = new VotoPeliculaDTO()
+            {
+                PeliculaId = PeliculaId,
+                Voto = votoSeleccionado
+            };
+            var responseHttp = await repo.Post("api/votos", votoPeliculaDTO);
+
+            if (responseHttp.Error)
+            {
+                var msgError = await responseHttp.ObtenerMensajeError();
+                await swal.FireAsync("Error", msgError, SweetAlertIcon.Error);
+            }
+            else
+            {
+                await swal.FireAsync("Exitos", "Su voto ha sido registrado", SweetAlertIcon.Info);
+            }
+        }
     }
 }

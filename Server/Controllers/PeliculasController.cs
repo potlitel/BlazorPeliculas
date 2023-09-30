@@ -4,6 +4,7 @@ using BlazorPeliculas.Shared.DTOs;
 using BlazorPeliculas.Shared.Entidades;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
@@ -11,26 +12,30 @@ namespace BlazorPeliculas.Server.Controllers
 {
     [ApiController]
     [Route("api/peliculas")]
+    [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
     public class PeliculasController : ControllerBase
     {
         private readonly ApplicationDBContext context;
         private readonly IAlmacenadorArchivos almacenadorArchivos;
         private readonly IMapper mapper;
+        private readonly UserManager<IdentityUser> userManager;
         private readonly string contenedor = "peliculas";
 
         public PeliculasController(
             ApplicationDBContext context,
             IAlmacenadorArchivos almacenadorArchivos,
-            IMapper mapper
+            IMapper mapper,
+            UserManager<IdentityUser> userManager
         )
         {
             this.context = context;
             this.almacenadorArchivos = almacenadorArchivos;
             this.mapper = mapper;
+            this.userManager = userManager;
         }
 
         [HttpGet]
-        [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
+        [AllowAnonymous]
         public async Task<ActionResult<HomePageDTO>> Get()
         {
             var limite = 6;
@@ -59,6 +64,7 @@ namespace BlazorPeliculas.Server.Controllers
         }
 
         [HttpGet("{id:int}")]
+        [AllowAnonymous]
         public async Task<ActionResult<PeliculaVisualizarDTO>> Get(int id)
         {
             var pelicula = await context.Peliculas
@@ -75,8 +81,37 @@ namespace BlazorPeliculas.Server.Controllers
             }
 
             //TODO: sistema de votación
-            var promedioVoto = 4;
-            var votoUsuario = 5;
+            var promedioVoto = 0.0;
+            var votoUsuario = 0;
+
+            if (await context.VotosPeliculas.AnyAsync(v => v.PeliculaId == id))
+            {
+                promedioVoto = await context.VotosPeliculas
+                    .Where(vot => vot.PeliculaId == id)
+                    .AverageAsync(vot => vot.Voto);
+                if (HttpContext.User.Identity!.IsAuthenticated)
+                {
+                    var usuario = await userManager.FindByEmailAsync(
+                        HttpContext.User.Identity!.Name!
+                    );
+
+                    if (usuario is null)
+                    {
+                        return BadRequest("Usuario no encontrado");
+                    }
+
+                    var usuarioId = usuario.Id;
+
+                    var votoUsuarioDB = await context.VotosPeliculas.FirstOrDefaultAsync(
+                        voto => voto.PeliculaId == id && voto.UsuarioId == usuarioId
+                    );
+
+                    if (votoUsuarioDB is not null)
+                    {
+                        votoUsuario = votoUsuarioDB.Voto;
+                    }
+                }
+            }
 
             var modelo = new PeliculaVisualizarDTO()
             {
@@ -102,6 +137,7 @@ namespace BlazorPeliculas.Server.Controllers
         }
 
         [HttpGet("filtrar")]
+        [AllowAnonymous]
         public async Task<ActionResult<List<Pelicula>>> Get(
             [FromQuery] ParametrosBusquedaPeliculasDTO modelo
         )

@@ -1,0 +1,6 @@
+﻿@for (int i = 1; i <= MaximoPuntaje; i++)
+{
+    var numeroEstrella = i;
+    <span @onclick="@(() => onClickHandle(numeroEstrella))" @onmouseover="@(() => onMouseOverHandle(numeroEstrella))"
+        style="cursor:pointer" class="fa fa-star @(PuntajeSeleccionado >= i ? "checked" : null)"></span>
+}

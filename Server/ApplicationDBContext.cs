@@ -20,6 +20,7 @@ namespace BlazorPeliculas.Server
         public DbSet<Genero> Generos => Set<Genero>();
         public DbSet<Actor> Actores => Set<Actor>();
         public DbSet<Pelicula> Peliculas => Set<Pelicula>();
+        public DbSet<VotoPelicula> VotosPeliculas => Set<VotoPelicula>();
         public DbSet<GeneroPelicula> GenerosPeliculas => Set<GeneroPelicula>();
         public DbSet<PeliculaActor> PeliculasActor => Set<PeliculaActor>();
     }
