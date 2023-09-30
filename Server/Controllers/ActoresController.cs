@@ -11,7 +11,7 @@ namespace BlazorPeliculas.Server.Controllers
 {
     [ApiController]
     [Route("api/actores")]
-    [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
+    [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme, Roles = "admin")]
     public class ActoresController : ControllerBase
     {
         private readonly ApplicationDBContext context;

@@ -9,7 +9,7 @@ namespace BlazorPeliculas.Server.Controllers
 {
     [ApiController]
     [Route("api/generos")]
-    [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
+    [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme, Roles = "admin")]
     public class GenerosController : ControllerBase
     {
         private readonly ApplicationDBContext context;

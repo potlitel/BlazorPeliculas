@@ -1,0 +1,26 @@
+﻿@page "/usuarios/editar/{UsuarioId}"
+
+@inject IRepositorio repo
+@inject SweetAlertService swal
+
+<h3>Editar Usuario</h3>
+
+@if (roles is null)
+{
+    <p>Cargando...</p>
+}
+else
+{
+    <div class="form-inline">
+        <select class="form-select mb-2" @bind="rolSeleccionado">
+            <option value="0">--Seleccione un rol--</option>
+            @foreach (var item in roles)
+            {
+                <option value="@item.Nombre">@item.Nombre</option>
+            }
+        </select>
+
+        <button class="btn btn-info mb-2" @onclick="AsignarRol">Asignar Rol</button>
+        <button class="btn btn-danger mb-2" @onclick="RemoverRol">Remover Rol</button>
+    </div>
+}

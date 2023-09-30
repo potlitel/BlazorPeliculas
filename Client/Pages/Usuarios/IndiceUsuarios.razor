@@ -1,0 +1,43 @@
+﻿@page "/usuarios"
+@using BlazorPeliculas.Client.Auth;
+@inject IRepositorio repo
+@inject SweetAlertService swal
+@inject NavigationManager navigationManager
+@inject ILoginService loginService
+
+<h3>Indice Usuarios</h3>
+
+<Paginacion PaginaActual="paginaActual" PaginasTotales="paginasTotales" PaginaSeleccionada="paginaSeleccionada"></Paginacion>
+
+<ListadoGenerico listado="Usuarios">
+    <HayRegistrosCompleto>
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th></th>
+                    <th>Nombre</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Usuarios!)
+                {
+                    <tr>
+                        <td>
+                            <a href="usuarios/editar/@item.Id" class="btn btn-success">Editar</a>
+                            @* <button class="btn btn-danger" @onclick="(() => Borrar(item))">Borrar</button> *@
+                        </td>
+                        <td>
+                            @item.Email
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </HayRegistrosCompleto>
+    <NoHayRegistros>
+        No hay usuarios para mostrar
+    </NoHayRegistros>
+</ListadoGenerico>
+
+
+

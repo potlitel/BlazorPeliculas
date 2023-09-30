@@ -35,7 +35,7 @@ namespace BlazorPeliculas.Server.Controllers
 
             if (resultado.Succeeded)
             {
-                return BuildToken(model);
+                return await BuildToken(model);
             }
             else
             {
@@ -55,7 +55,7 @@ namespace BlazorPeliculas.Server.Controllers
 
             if (resultado.Succeeded)
             {
-                return BuildToken(model);
+                return await BuildToken(model);
             }
             else
             {
@@ -63,13 +63,21 @@ namespace BlazorPeliculas.Server.Controllers
             }
         }
 
-        private UserTokenDTO BuildToken(UserInfo userinfo)
+        private async Task<UserTokenDTO> BuildToken(UserInfo userinfo)
         {
             var claims = new List<Claim>()
             {
                 new Claim(ClaimTypes.Name, userinfo.Email),
                 new Claim("mivalor", "lo que sea"),
             };
+
+            var usuario = await userManager.FindByEmailAsync(userinfo.Email);
+            var roles = await userManager.GetRolesAsync(usuario!);
+
+            foreach (var item in roles)
+            {
+                claims.Add(new Claim(ClaimTypes.Role, item));
+            }
 
             var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(configuration["jwtkey"]!));
             var creds = new SigningCredentials(key, SecurityAlgorithms.HmacSha256);

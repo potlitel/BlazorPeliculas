@@ -136,6 +136,14 @@ build_metadata.AdditionalFiles.CssScope = b-ypsgrek0ih
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUGVsaWN1bGFzXFZpc3VhbGl6YXJQZWxpY3VsYS5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = b-2n6ym77meg
 
+[G:/Trabajo/GitProjects/Real-Projects/BlazorPeliculas/Client/Pages/Usuarios/EditarUsuario.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVXN1YXJpb3NcRWRpdGFyVXN1YXJpby5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = b-e5of7lso3s
+
+[G:/Trabajo/GitProjects/Real-Projects/BlazorPeliculas/Client/Pages/Usuarios/IndiceUsuarios.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVXN1YXJpb3NcSW5kaWNlVXN1YXJpb3MucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = b-eyv83ai4ak
+
 [G:/Trabajo/GitProjects/Real-Projects/BlazorPeliculas/Client/Shared/CustomInputImg.razor]
 build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXEN1c3RvbUlucHV0SW1nLnJhem9y
 build_metadata.AdditionalFiles.CssScope = b-q8y8ufjyvk

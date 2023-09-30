@@ -401,7 +401,7 @@ namespace BlazorPeliculas.Server.Migrations
             modelBuilder.Entity("BlazorPeliculas.Shared.Entidades.VotoPelicula", b =>
                 {
                     b.HasOne("BlazorPeliculas.Shared.Entidades.Pelicula", "Pelicula")
-                        .WithMany()
+                        .WithMany("VotosPeliculas")
                         .HasForeignKey("PeliculaId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -475,6 +475,8 @@ namespace BlazorPeliculas.Server.Migrations
                     b.Navigation("GenerosPelicula");
 
                     b.Navigation("PeliculasActor");
+
+                    b.Navigation("VotosPeliculas");
                 });
 #pragma warning restore 612, 618
         }
