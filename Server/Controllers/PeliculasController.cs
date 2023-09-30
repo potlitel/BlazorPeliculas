@@ -142,6 +142,7 @@ namespace BlazorPeliculas.Server.Controllers
             [FromQuery] ParametrosBusquedaPeliculasDTO modelo
         )
         {
+            //Modelo de ejecución diferida, se arma el query dinamicamente en dependencia de la selección del usuario
             var peliculasQueryable = context.Peliculas.AsQueryable();
 
             if (!string.IsNullOrWhiteSpace(modelo.Titulo))
@@ -163,7 +164,13 @@ namespace BlazorPeliculas.Server.Controllers
                     pel => pel.GenerosPelicula.Select(gen => gen.GeneroId).Contains(modelo.GeneroID)
                 );
 
-            //TODO: Implementar votación
+            if (modelo.MasVotadas)
+            {
+                peliculasQueryable = peliculasQueryable.OrderByDescending(
+                    p => p.VotosPeliculas.Average(vp => vp.Voto)
+                );
+            }
+
             await HttpContext.InsertarParametrosPaginacionEnRespuesta(
                 peliculasQueryable,
                 modelo.CantidadRegistros

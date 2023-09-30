@@ -20,6 +20,8 @@ namespace BlazorPeliculas.Shared.Entidades
 
         public List<PeliculaActor> PeliculasActor { get; set; } = new List<PeliculaActor>();
 
+        public List<VotoPelicula> VotosPeliculas { get; set; } = new List<VotoPelicula>();
+
         public string? TituloCortado
         {
             get
