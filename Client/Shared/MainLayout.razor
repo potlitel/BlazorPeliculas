@@ -1,4 +1,6 @@
 ﻿@inherits LayoutComponentBase
+@inject IJSRuntime js
+@inject NavigationManager navigationManager
 
 <div class="page">
     <div class="sidebar">
@@ -28,4 +30,26 @@
     // private string Color = "red";
     // private string Size = "12px";
     AppState appState = new AppState();
+
+    [CascadingParameter]
+    public Task<AuthenticationState> authenticationState { get; set; } = null!;
+
+    protected override async Task OnInitializedAsync()
+    {
+        await js.InvokeVoidAsync("timerInactivo", DotNetObjectReference.Create(this));
+        // renovadorToken.Iniciar();
+    }
+
+    [JSInvokable]
+    public async Task Logout()
+    {
+        var authState = await authenticationState;
+        if (authState.User.Identity!.IsAuthenticated)
+        {
+            navigationManager.NavigateTo("Logout");
+        }
+    }
+
+
+
 }
